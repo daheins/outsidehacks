@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		650B2953198455C20097CA76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650B2952198455C20097CA76 /* Foundation.framework */; };
+		650B2955198455C20097CA76 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650B2954198455C20097CA76 /* CoreGraphics.framework */; };
+		650B2957198455C20097CA76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650B2956198455C20097CA76 /* UIKit.framework */; };
+		650B2959198455C20097CA76 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650B2958198455C20097CA76 /* CoreData.framework */; };
+		650B295F198455C20097CA76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 650B295D198455C20097CA76 /* InfoPlist.strings */; };
+		650B2961198455C20097CA76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B2960198455C20097CA76 /* main.m */; };
+		650B2965198455C30097CA76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B2964198455C30097CA76 /* AppDelegate.m */; };
+		650B2968198455C30097CA76 /* hottub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 650B2966198455C30097CA76 /* hottub.xcdatamodeld */; };
+		650B296A198455C30097CA76 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 650B2969198455C30097CA76 /* Images.xcassets */; };
+		650B2971198455C30097CA76 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650B2970198455C30097CA76 /* XCTest.framework */; };
+		650B2972198455C30097CA76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650B2952198455C20097CA76 /* Foundation.framework */; };
+		650B2973198455C30097CA76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650B2956198455C20097CA76 /* UIKit.framework */; };
+		650B2974198455C30097CA76 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650B2958198455C20097CA76 /* CoreData.framework */; };
+		650B297C198455C30097CA76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 650B297A198455C30097CA76 /* InfoPlist.strings */; };
+		650B297E198455C30097CA76 /* hottubTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B297D198455C30097CA76 /* hottubTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		650B2975198455C30097CA76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 650B2947198455C20097CA76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 650B294E198455C20097CA76;
+			remoteInfo = hottub;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		650B294F198455C20097CA76 /* hottub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hottub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		650B2952198455C20097CA76 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		650B2954198455C20097CA76 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		650B2956198455C20097CA76 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		650B2958198455C20097CA76 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		650B295C198455C20097CA76 /* hottub-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hottub-Info.plist"; sourceTree = "<group>"; };
+		650B295E198455C20097CA76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		650B2960198455C20097CA76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		650B2962198455C30097CA76 /* hottub-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hottub-Prefix.pch"; sourceTree = "<group>"; };
+		650B2963198455C30097CA76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		650B2964198455C30097CA76 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		650B2967198455C30097CA76 /* hottub.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = hottub.xcdatamodel; sourceTree = "<group>"; };
+		650B2969198455C30097CA76 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		650B296F198455C30097CA76 /* hottubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hottubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		650B2970198455C30097CA76 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		650B2979198455C30097CA76 /* hottubTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hottubTests-Info.plist"; sourceTree = "<group>"; };
+		650B297B198455C30097CA76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		650B297D198455C30097CA76 /* hottubTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hottubTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		650B294C198455C20097CA76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				650B2955198455C20097CA76 /* CoreGraphics.framework in Frameworks */,
+				650B2959198455C20097CA76 /* CoreData.framework in Frameworks */,
+				650B2957198455C20097CA76 /* UIKit.framework in Frameworks */,
+				650B2953198455C20097CA76 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		650B296C198455C30097CA76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				650B2971198455C30097CA76 /* XCTest.framework in Frameworks */,
+				650B2974198455C30097CA76 /* CoreData.framework in Frameworks */,
+				650B2973198455C30097CA76 /* UIKit.framework in Frameworks */,
+				650B2972198455C30097CA76 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		650B2946198455C20097CA76 = {
+			isa = PBXGroup;
+			children = (
+				650B295A198455C20097CA76 /* hottub */,
+				650B2977198455C30097CA76 /* hottubTests */,
+				650B2951198455C20097CA76 /* Frameworks */,
+				650B2950198455C20097CA76 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		650B2950198455C20097CA76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				650B294F198455C20097CA76 /* hottub.app */,
+				650B296F198455C30097CA76 /* hottubTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		650B2951198455C20097CA76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				650B2952198455C20097CA76 /* Foundation.framework */,
+				650B2954198455C20097CA76 /* CoreGraphics.framework */,
+				650B2956198455C20097CA76 /* UIKit.framework */,
+				650B2958198455C20097CA76 /* CoreData.framework */,
+				650B2970198455C30097CA76 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		650B295A198455C20097CA76 /* hottub */ = {
+			isa = PBXGroup;
+			children = (
+				650B2963198455C30097CA76 /* AppDelegate.h */,
+				650B2964198455C30097CA76 /* AppDelegate.m */,
+				650B2969198455C30097CA76 /* Images.xcassets */,
+				650B2966198455C30097CA76 /* hottub.xcdatamodeld */,
+				650B295B198455C20097CA76 /* Supporting Files */,
+			);
+			path = hottub;
+			sourceTree = "<group>";
+		};
+		650B295B198455C20097CA76 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				650B295C198455C20097CA76 /* hottub-Info.plist */,
+				650B295D198455C20097CA76 /* InfoPlist.strings */,
+				650B2960198455C20097CA76 /* main.m */,
+				650B2962198455C30097CA76 /* hottub-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		650B2977198455C30097CA76 /* hottubTests */ = {
+			isa = PBXGroup;
+			children = (
+				650B297D198455C30097CA76 /* hottubTests.m */,
+				650B2978198455C30097CA76 /* Supporting Files */,
+			);
+			path = hottubTests;
+			sourceTree = "<group>";
+		};
+		650B2978198455C30097CA76 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				650B2979198455C30097CA76 /* hottubTests-Info.plist */,
+				650B297A198455C30097CA76 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		650B294E198455C20097CA76 /* hottub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 650B2981198455C30097CA76 /* Build configuration list for PBXNativeTarget "hottub" */;
+			buildPhases = (
+				650B294B198455C20097CA76 /* Sources */,
+				650B294C198455C20097CA76 /* Frameworks */,
+				650B294D198455C20097CA76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hottub;
+			productName = hottub;
+			productReference = 650B294F198455C20097CA76 /* hottub.app */;
+			productType = "com.apple.product-type.application";
+		};
+		650B296E198455C30097CA76 /* hottubTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 650B2984198455C30097CA76 /* Build configuration list for PBXNativeTarget "hottubTests" */;
+			buildPhases = (
+				650B296B198455C30097CA76 /* Sources */,
+				650B296C198455C30097CA76 /* Frameworks */,
+				650B296D198455C30097CA76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				650B2976198455C30097CA76 /* PBXTargetDependency */,
+			);
+			name = hottubTests;
+			productName = hottubTests;
+			productReference = 650B296F198455C30097CA76 /* hottubTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		650B2947198455C20097CA76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = daheins;
+				TargetAttributes = {
+					650B296E198455C30097CA76 = {
+						TestTargetID = 650B294E198455C20097CA76;
+					};
+				};
+			};
+			buildConfigurationList = 650B294A198455C20097CA76 /* Build configuration list for PBXProject "hottub" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 650B2946198455C20097CA76;
+			productRefGroup = 650B2950198455C20097CA76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				650B294E198455C20097CA76 /* hottub */,
+				650B296E198455C30097CA76 /* hottubTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		650B294D198455C20097CA76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				650B295F198455C20097CA76 /* InfoPlist.strings in Resources */,
+				650B296A198455C30097CA76 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		650B296D198455C30097CA76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				650B297C198455C30097CA76 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		650B294B198455C20097CA76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				650B2965198455C30097CA76 /* AppDelegate.m in Sources */,
+				650B2961198455C20097CA76 /* main.m in Sources */,
+				650B2968198455C30097CA76 /* hottub.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		650B296B198455C30097CA76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				650B297E198455C30097CA76 /* hottubTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		650B2976198455C30097CA76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 650B294E198455C20097CA76 /* hottub */;
+			targetProxy = 650B2975198455C30097CA76 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		650B295D198455C20097CA76 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				650B295E198455C20097CA76 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		650B297A198455C30097CA76 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				650B297B198455C30097CA76 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		650B297F198455C30097CA76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		650B2980198455C30097CA76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		650B2982198455C30097CA76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hottub/hottub-Prefix.pch";
+				INFOPLIST_FILE = "hottub/hottub-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		650B2983198455C30097CA76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hottub/hottub-Prefix.pch";
+				INFOPLIST_FILE = "hottub/hottub-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		650B2985198455C30097CA76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/hottub.app/hottub";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hottub/hottub-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "hottubTests/hottubTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		650B2986198455C30097CA76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/hottub.app/hottub";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hottub/hottub-Prefix.pch";
+				INFOPLIST_FILE = "hottubTests/hottubTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		650B294A198455C20097CA76 /* Build configuration list for PBXProject "hottub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				650B297F198455C30097CA76 /* Debug */,
+				650B2980198455C30097CA76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		650B2981198455C30097CA76 /* Build configuration list for PBXNativeTarget "hottub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				650B2982198455C30097CA76 /* Debug */,
+				650B2983198455C30097CA76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		650B2984198455C30097CA76 /* Build configuration list for PBXNativeTarget "hottubTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				650B2985198455C30097CA76 /* Debug */,
+				650B2986198455C30097CA76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		650B2966198455C30097CA76 /* hottub.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				650B2967198455C30097CA76 /* hottub.xcdatamodel */,
+			);
+			currentVersion = 650B2967198455C30097CA76 /* hottub.xcdatamodel */;
+			path = hottub.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 650B2947198455C20097CA76 /* Project object */;
+}
