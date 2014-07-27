@@ -40,6 +40,12 @@
 		6EAAC70A1984953900B1315D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAAC7091984953900B1315D /* CFNetwork.framework */; };
 		6EAAC70C1984954000B1315D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAAC70B1984954000B1315D /* Security.framework */; };
 		6EAAC70E1984954D00B1315D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAAC70D1984954D00B1315D /* CoreBluetooth.framework */; };
+		6EAAC711198497E600B1315D /* HTAdvertiser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAC710198497E600B1315D /* HTAdvertiser.m */; };
+		6EAAC712198497E600B1315D /* HTAdvertiser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAC710198497E600B1315D /* HTAdvertiser.m */; };
+		6EAAC715198498AD00B1315D /* HTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAC714198498AD00B1315D /* HTUser.m */; };
+		6EAAC716198498AD00B1315D /* HTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAC714198498AD00B1315D /* HTUser.m */; };
+		6EAAC7211984996300B1315D /* HTModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAC7201984996300B1315D /* HTModel.m */; };
+		6EAAC7221984996300B1315D /* HTModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAC7201984996300B1315D /* HTModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +99,12 @@
 		6EAAC7091984953900B1315D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6EAAC70B1984954000B1315D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		6EAAC70D1984954D00B1315D /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		6EAAC70F198497E600B1315D /* HTAdvertiser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTAdvertiser.h; sourceTree = "<group>"; };
+		6EAAC710198497E600B1315D /* HTAdvertiser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTAdvertiser.m; sourceTree = "<group>"; };
+		6EAAC713198498AD00B1315D /* HTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTUser.h; sourceTree = "<group>"; };
+		6EAAC714198498AD00B1315D /* HTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTUser.m; sourceTree = "<group>"; };
+		6EAAC71F1984996300B1315D /* HTModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTModel.h; sourceTree = "<group>"; };
+		6EAAC7201984996300B1315D /* HTModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTModel.m; sourceTree = "<group>"; };
 		87663D3A33D9405A8C6ED099 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		A7A7E1F6DD004E0082A663DB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -186,6 +198,12 @@
 				5D33524E198473F20049584A /* LandingViewController.m */,
 				5D33525019847E140049584A /* AccountBasicsViewController.h */,
 				5D33525119847E140049584A /* AccountBasicsViewController.m */,
+				6EAAC70F198497E600B1315D /* HTAdvertiser.h */,
+				6EAAC710198497E600B1315D /* HTAdvertiser.m */,
+				6EAAC713198498AD00B1315D /* HTUser.h */,
+				6EAAC714198498AD00B1315D /* HTUser.m */,
+				6EAAC71F1984996300B1315D /* HTModel.h */,
+				6EAAC7201984996300B1315D /* HTModel.m */,
 			);
 			path = hottub;
 			sourceTree = "<group>";
@@ -378,6 +396,9 @@
 				650B2968198455C30097CA76 /* hottub.xcdatamodeld in Sources */,
 				650B298C19847CB80097CA76 /* AccountDetailsViewController.m in Sources */,
 				6EAAC6FF198494D200B1315D /* CBLDatabase+WSMUtilities.m in Sources */,
+				6EAAC7211984996300B1315D /* HTModel.m in Sources */,
+				6EAAC715198498AD00B1315D /* HTUser.m in Sources */,
+				6EAAC711198497E600B1315D /* HTAdvertiser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,9 +406,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EAAC712198497E600B1315D /* HTAdvertiser.m in Sources */,
 				650B297E198455C30097CA76 /* hottubTests.m in Sources */,
 				6EAAC700198494D200B1315D /* CBLDatabase+WSMUtilities.m in Sources */,
 				6EAAC6FC198494D200B1315D /* WSMLogger.m in Sources */,
+				6EAAC716198498AD00B1315D /* HTUser.m in Sources */,
+				6EAAC7221984996300B1315D /* HTModel.m in Sources */,
 				6EAAC6FE198494D200B1315D /* WSMColorPalette.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
