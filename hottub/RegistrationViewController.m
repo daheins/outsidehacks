@@ -9,9 +9,10 @@
 #import "RegistrationViewController.h"
 
 #import "AccountBasicsViewController.h"
+#import "AccountDetailsViewController.h"
 #import "LandingViewController.h"
 
-@interface RegistrationViewController () <LandingViewControllerDelegate>
+@interface RegistrationViewController () <LandingViewControllerDelegate, AccountBasicsViewControllerDelegate, AccountDetailsViewControllerDelegate>
 
 @end
 
@@ -34,7 +35,22 @@
 
 - (void)landingViewControllerDidFinish:(LandingViewController *)controller {
     AccountBasicsViewController *abvc = [[AccountBasicsViewController alloc] init];
+    abvc.delegate = self;
     [self pushViewController:abvc animated:YES];
+}
+
+#pragma mark AccountBasicsViewControllerDelegate
+
+- (void)accountBasicsViewControllerDelegateDidFinish:(AccountBasicsViewController *)controller {
+    AccountDetailsViewController *advc = [[AccountDetailsViewController alloc] init];
+    advc.delegate = self;
+    [self pushViewController:advc animated:YES];
+}
+
+#pragma mark AccountDetailsViewControllerDelegate
+
+- (void)accountDetailsViewControllerDelegateDidFinish:(AccountDetailsViewController *)controller {
+    return;
 }
 
 @end

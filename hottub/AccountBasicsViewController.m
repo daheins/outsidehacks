@@ -11,6 +11,7 @@
 @interface AccountBasicsViewController ()
 
 @property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UIButton *continueButton;
 
 @end
 
@@ -30,7 +31,12 @@
     
     self.titleLabel.center = CGPointMake(self.view.bounds.size.width/2.0, self.view.bounds.size.height/2.0);
     [self.view addSubview:self.titleLabel];
+
+    self.continueButton.frame = CGRectMake(30.0, self.view.bounds.size.height - 100, self.view.bounds.size.width - 60.0, 30.0);
+    [self.view addSubview:self.continueButton];
 }
+
+#pragma mark Properties
 
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
@@ -40,6 +46,24 @@
         [_titleLabel sizeToFit];
     }
     return _titleLabel;
+}
+
+- (UIButton *)continueButton {
+    if (!_continueButton) {
+        _continueButton = [[UIButton alloc] initWithFrame:CGRectZero];
+        [_continueButton setTitle:@"Add account details" forState:UIControlStateNormal];
+        [_continueButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_continueButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+        [_continueButton sizeToFit];
+        [_continueButton addTarget:self action:@selector(onContinueButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _continueButton;
+}
+
+#pragma mark Selectors
+
+- (void)onContinueButtonTapped:(UIButton *)button {
+    [self.delegate accountBasicsViewControllerDelegateDidFinish:self];
 }
 
 @end
