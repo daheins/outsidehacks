@@ -146,7 +146,7 @@
 }
 
 - (void)onContinueButtonTapped:(UIButton *)button {
-    [self.delegate accountBasicsViewControllerDelegateDidFinish:self];
+    [self.delegate accountBasicsViewControllerDidFinish:self withName:self.nameField.text andImage:self.profileImageView.image];
 }
 
 @end

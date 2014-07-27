@@ -15,6 +15,7 @@
 @interface RegistrationViewController () <LandingViewControllerDelegate, AccountBasicsViewControllerDelegate, AccountDetailsViewControllerDelegate>
 
 @property (nonatomic, strong) NSDictionary *userInfo;
+@property (nonatomic, strong) UIImage *profileImage;
 
 @end
 
@@ -22,6 +23,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationBarHidden = YES;
 
     LandingViewController *landingVC = [[LandingViewController alloc] init];
     landingVC.delegate = self;
@@ -39,7 +42,10 @@
 
 #pragma mark AccountBasicsViewControllerDelegate
 
-- (void)accountBasicsViewControllerDelegateDidFinish:(AccountBasicsViewController *)controller {
+- (void)accountBasicsViewControllerDidFinish:(AccountBasicsViewController *)controller withName:(NSString *)name andImage:(UIImage *)image {
+    [self.userInfo setValue:name forKey:@"name"];
+    self.profileImage = image;
+    
     AccountDetailsViewController *advc = [[AccountDetailsViewController alloc] init];
     advc.delegate = self;
     [self pushViewController:advc animated:YES];
