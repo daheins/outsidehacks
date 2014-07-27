@@ -13,8 +13,8 @@
 @interface HTAdvertiser () <CBPeripheralDelegate>
 
 #pragma mark - Service Variables
-@property (nonatomic, strong) CBUUID *serviceUUID, *usernameUUID, *userIDUUID;
-@property (nonatomic, strong) CBMutableCharacteristic *userIDCharacteristic, *usernameCharacteristic;
+@property (nonatomic, strong) CBUUID *serviceUUID;
+
 @property (nonatomic, strong) CBMutableService *service;
 
 #pragma mark - Peripheral Properties
@@ -91,30 +91,50 @@ WSM_SINGLETON_WITH_NAME(sharedInstance)
     return WSM_LAZY(_serviceUUID, [CBUUID UUIDWithString:@"9D07C96F-AF59-40C9-80E3-4952173B6588"]);
 }
 
-- (CBUUID *)usernameUUID {
-    return WSM_LAZY(_usernameUUID, [CBUUID UUIDWithString:@"0D7E8A55-4420-4069-A249-8D8BFE6C460A"]);
-}
-
-- (CBUUID *)userIDUUID {
-    return WSM_LAZY(_userIDUUID, [CBUUID UUIDWithString:@"B19408E1-2D0D-4650-9E45-2DA006C462F0"]);
-}
-
 - (CBMutableCharacteristic *)userIDCharacteristic {
-    return WSM_LAZY(_userIDCharacteristic, ({
-        [[CBMutableCharacteristic alloc] initWithType:self.usernameUUID
-                                           properties:CBCharacteristicPropertyNotify
-                                                value:nil
-                                          permissions:CBAttributePermissionsReadable];
-    }));
+    return WSM_LAZY(_userIDCharacteristic,
+                    [self characteristicWithUUID:@"B19408E1-2D0D-4650-9E45-8D8BFE6C4600"]);
+    
 }
 
 - (CBMutableCharacteristic *)usernameCharacteristic {
-    return WSM_LAZY(_userIDCharacteristic, ({
-        [[CBMutableCharacteristic alloc] initWithType:self.usernameUUID
-                                           properties:CBCharacteristicPropertyNotify
-                                                value:nil
-                                          permissions:CBAttributePermissionsReadable];
-    }));
+    return WSM_LAZY(_usernameCharacteristic,
+                    [self characteristicWithUUID:@"B19408E1-2D0D-4650-9E45-8D8BFE6C4601"]);
+}
+
+- (CBMutableCharacteristic *)twitterCharacteristic {
+    return WSM_LAZY(_twitterCharacteristic,
+                    [self characteristicWithUUID:@"B19408E1-2D0D-4650-9E45-4952173B6582"]);
+}
+
+
+- (CBMutableCharacteristic *)facebookCharacteristic {
+    return WSM_LAZY(_facebookCharacteristic,
+                    [self characteristicWithUUID:@"B19408E1-2D0D-4650-9E45-2DA006C462F3"]);
+}
+
+
+- (CBMutableCharacteristic *)emailCharacteristic {
+    return WSM_LAZY(_emailCharacteristic,
+                    [self characteristicWithUUID:@"B19408E1-2D0D-4650-9E45-2DA006C462F4"]);
+}
+
+
+- (CBMutableCharacteristic *)phoneCharacteristic {
+    return WSM_LAZY(_phoneCharacteristic,
+                    [self characteristicWithUUID:@"B19408E1-2D0D-4650-9E45-2DA006C462F5"]);
+}
+
+- (CBMutableCharacteristic *)avatarCharacteristic {
+    return WSM_LAZY(_avatarCharacteristic,
+                    [self characteristicWithUUID:@"B19408E1-2D0D-4650-9E45-2DA006C462F6"]);
+}
+
+- (CBMutableCharacteristic *) characteristicWithUUID: (NSString *) uuidString {
+    return [[CBMutableCharacteristic alloc] initWithType:[CBUUID UUIDWithString:uuidString]
+                                              properties:CBCharacteristicPropertyNotify
+                                                   value:nil
+                                             permissions:CBAttributePermissionsReadable];
 }
 
 - (CBMutableService *)service {
@@ -193,30 +213,36 @@ WSM_SINGLETON_WITH_NAME(sharedInstance)
 
 - (void)peripheralManager:(CBPeripheralManager *)peripheral didReceiveReadRequest:(CBATTRequest *)request {
     NSLog(@"Read request: %@", request);
-    if ([request.characteristic.UUID isEqual:self.usernameUUID]) {
-        [peripheral respondToRequest:request withResult: CBATTErrorSuccess];
-    } else if ([request.characteristic.UUID isEqual:self.userIDUUID]) {
-        [peripheral respondToRequest:request withResult: CBATTErrorSuccess];
-    }
+    [peripheral respondToRequest:request withResult: CBATTErrorSuccess];
 }
 
 - (void)peripheralManager:(CBPeripheralManager *)peripheral
                   central:(CBCentral *)central didSubscribeToCharacteristic:(CBCharacteristic *)characteristic {
+    NSLog(@"Did subscribe: %@", characteristic);
+    __block NSData *data;
+    __block CBMutableCharacteristic *mutableChar;
     
     [[CBLManager sharedInstance] doAsync:^{
-        NSLog(@"Did subscribe: %@", characteristic);
-        NSData *data;
-        CBMutableCharacteristic *service;
-        if ([characteristic.UUID isEqual:self.usernameUUID]) {
-            data = [self.currentUser.document.documentID dataUsingEncoding:NSUTF8StringEncoding];
-            service = self.usernameCharacteristic;
+        if (characteristic.UUID.hash == self.usernameCharacteristic.UUID.hash) {
+            data = [self.currentUser.name dataUsingEncoding:NSUTF8StringEncoding];
+            mutableChar = self.usernameCharacteristic;
+        } else if (characteristic.UUID.hash == self.userIDCharacteristic.UUID.hash) {
+            data = [self.currentUser.twitter dataUsingEncoding:NSUTF8StringEncoding];
+            mutableChar = self.userIDCharacteristic;
+        } else if (characteristic.UUID.hash == self.twitterCharacteristic.UUID.hash) {
+            data = [self.currentUser.twitter dataUsingEncoding:NSUTF8StringEncoding];
+            mutableChar = self.twitterCharacteristic;
+        } else if (characteristic.UUID.hash == self.facebookCharacteristic.UUID.hash) {
+            data = [self.currentUser.facebook dataUsingEncoding:NSUTF8StringEncoding];
+            mutableChar = self.facebookCharacteristic;
         }
         if (data) {
-            [peripheral updateValue:data
-                  forCharacteristic:service
-               onSubscribedCentrals:nil];
+            dispatch_async(_peripheralQueue, ^{
+                [peripheral updateValue:data forCharacteristic:mutableChar onSubscribedCentrals:nil];
+            });
         }
     }];
+    
 }
 
 - (void)peripheralManager:(CBPeripheralManager *)peripheral

@@ -19,6 +19,7 @@
 
 @property (nonatomic, strong) CBCentralManager *centralManager;
 @property (nonatomic, strong) NSMutableSet *stagedDevices, *connectedDevices;
+@property (nonatomic, strong) NSMutableDictionary *discover;
 
 #pragma mark - Current State
 
@@ -49,16 +50,20 @@ WSM_SINGLETON_WITH_NAME(sharedInstance)
     }));
 }
 
-- (void) start {
+- (void)start {
     [self startScan];
     
 }
 
-- (void) stop {
+- (void)stop {
     for (CBPeripheral *staged in [self.stagedDevices setByAddingObjectsFromSet: self.connectedDevices].objectEnumerator) {
         [self.centralManager cancelPeripheralConnection:staged];
     }
     [self.centralManager stopScan];
+}
+
+- (NSArray *)nearbyUsers {
+    return nil;
 }
 
 #pragma mark - Lazy Properties
@@ -138,6 +143,8 @@ WSM_SINGLETON_WITH_NAME(sharedInstance)
     
     peripheral.delegate = self;
     [peripheral discoverServices:@[self.serviceUUID]];
+    
+    
     NSLog(@"Connected to People: %@", self.connectedDevices);
 }
 
