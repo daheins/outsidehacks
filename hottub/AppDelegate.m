@@ -8,7 +8,13 @@
 
 #import "AppDelegate.h"
 
+#import "HTUser.h"
+#import "MainViewController.h"
 #import "RegistrationViewController.h"
+
+#import "HTUserManager.h"
+#import "HTAdvertiser.h"
+#import "HTScanner.h"
 
 @implementation AppDelegate
 
@@ -26,6 +32,9 @@
     logger.formatStyle = kWSMLogFormatStyleQueue;
     logger[kWSMLogFormatKeyFile] = @16;
     logger[kWSMLogFormatKeyFunction] = @40;
+    
+    [[HTUserManager sharedInstance] registerCapabilities:@[[HTAdvertiser sharedInstance],
+                                                           [HTScanner sharedInstance]]];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -35,10 +44,20 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    RegistrationViewController *reg = [[RegistrationViewController alloc] init];
-    self.window.rootViewController = reg;
+//    if ([HTUser defaultUser]) {
+//        
+//    } else {
+        RegistrationViewController *reg = [[RegistrationViewController alloc] init];
+        reg.registrationDelegate = self;
+        self.window.rootViewController = reg;
+//    }
     
     return YES;
+}
+
+- (void)registrationViewControllerDidFinish:(RegistrationViewController *)controller {
+    MainViewController *mvc = [[MainViewController alloc] init];
+    self.window.rootViewController = mvc;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

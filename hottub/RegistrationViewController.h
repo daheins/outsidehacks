@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class RegistrationViewController;
+
+@protocol RegistrationViewControllerDelegate <NSObject>
+
+- (void)registrationViewControllerDidFinish:(RegistrationViewController *)controller;
+
+@end
+
 @interface RegistrationViewController : UINavigationController
+
+@property (nonatomic, weak) id<RegistrationViewControllerDelegate> registrationDelegate;
 
 @end

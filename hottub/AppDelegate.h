@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+#import "RegistrationViewController.h"
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate, RegistrationViewControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

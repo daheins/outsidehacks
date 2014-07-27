@@ -22,10 +22,12 @@
 @property (nonatomic, strong) UIButton *facebookButton;
 @property (nonatomic, strong) UILabel *facebookLabel;
 @property (nonatomic, strong) UIActivityIndicatorView *facebookSpinner;
+@property (nonatomic, strong) NSString *facebookUsername;
 
 @property (nonatomic, strong) UIButton *twitterButton;
 @property (nonatomic, strong) UILabel *twitterLabel;
 @property (nonatomic, strong) UIActivityIndicatorView *twitterSpinner;
+@property (nonatomic, strong) NSString *twitterUsername;
 
 @property (nonatomic, strong) UIButton *finishButton;
 
@@ -208,6 +210,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.facebookLabel.hidden = NO;
                 self.facebookLabel.text = [NSString stringWithFormat:@"FB Username: %@", username];
+                self.facebookUsername = username;
                 [self.facebookLabel sizeToFit];
                 self.facebookLabel.center = CGPointMake(self.view.bounds.size.width/2.0, kFacebookCenterY);
                 [self.facebookSpinner stopAnimating];
@@ -232,6 +235,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.twitterLabel.hidden = NO;
                 self.twitterLabel.text = [NSString stringWithFormat:@"Twitter Username: %@", username];
+                self.twitterUsername = username;
                 [self.twitterLabel sizeToFit];
                 self.twitterLabel.center = CGPointMake(self.view.bounds.size.width/2.0, kTwitterCenterY);
                 [self.twitterSpinner stopAnimating];
@@ -248,7 +252,7 @@
 }
 
 - (void)onFinishButtonTapped:(UIButton *)button {
-    [self.delegate accountDetailsViewControllerDelegateDidFinish:self];
+    [self.delegate accountDetailsViewControllerDidFinish:self withFacebook:self.facebookUsername andTwitter:self.twitterUsername];
 }
 
 @end

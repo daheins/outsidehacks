@@ -10,11 +10,13 @@
 
 #import "AccountBasicsViewController.h"
 #import "AccountDetailsViewController.h"
+#import "HTUser.h"
 #import "LandingViewController.h"
 
 @interface RegistrationViewController () <LandingViewControllerDelegate, AccountBasicsViewControllerDelegate, AccountDetailsViewControllerDelegate>
 
 @property (nonatomic, strong) NSDictionary *userInfo;
+@property (nonatomic, strong) UIImage *profileImage;
 
 @end
 
@@ -22,6 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationBarHidden = YES;
 
     LandingViewController *landingVC = [[LandingViewController alloc] init];
     landingVC.delegate = self;
@@ -39,7 +43,10 @@
 
 #pragma mark AccountBasicsViewControllerDelegate
 
-- (void)accountBasicsViewControllerDelegateDidFinish:(AccountBasicsViewController *)controller {
+- (void)accountBasicsViewControllerDidFinish:(AccountBasicsViewController *)controller withName:(NSString *)name andImage:(UIImage *)image {
+    [self.userInfo setValue:name forKey:@"name"];
+    self.profileImage = image;
+    
     AccountDetailsViewController *advc = [[AccountDetailsViewController alloc] init];
     advc.delegate = self;
     [self pushViewController:advc animated:YES];
@@ -47,8 +54,35 @@
 
 #pragma mark AccountDetailsViewControllerDelegate
 
-- (void)accountDetailsViewControllerDelegateDidFinish:(AccountDetailsViewController *)controller {
-    return;
+- (void)accountDetailsViewControllerDidFinish:(AccountDetailsViewController *)controller withFacebook:(NSString *)facebook andTwitter:(NSString *)twitter {
+    NSNumber *random = [NSNumber numberWithInt: arc4random()];
+    [self.userInfo setValue:random forKey:@"id"];
+    [self.userInfo setValue:facebook forKey:@"facebook"];
+    [self.userInfo setValue:twitter forKey:@"twitter"];
+    
+//    HTUser *user = [HTUser createDefaultUserWithProperties:self.userInfo];
+//    NSData *imageData = UIImageJPEGRepresentation(self.profileImage, 0.7);
+//    
+//    // get MIME type
+//    NSString *mimeType;
+//    uint8_t c;
+//    [imageData getBytes:&c length:1];
+//    switch (c) {
+//        case 0xFF:
+//            mimeType = @"image/jpeg";
+//        case 0x89:
+//            mimeType = @"image/png";
+//        case 0x47:
+//            mimeType = @"image/gif";
+//        case 0x49:
+//        case 0x4D:
+//            mimeType = @"image/tiff";
+//    }
+//    
+//    [user setAttachmentNamed:@"profilepic" withContentType:mimeType content:imageData];
+//    [user save:nil];
+    
+    [self.registrationDelegate registrationViewControllerDidFinish:self];
 }
 
 @end

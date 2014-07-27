@@ -12,6 +12,8 @@
 @interface HTUser : HTModel
 
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *facebook;
+@property (nonatomic, strong) NSString *twitter;
 
 + (HTUser *) defaultUser;
 
