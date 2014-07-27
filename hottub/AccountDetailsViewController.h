@@ -14,7 +14,7 @@
 
 @protocol AccountDetailsViewControllerDelegate <NSObject>
 
-- (void)accountDetailsViewControllerDelegateDidFinish:(AccountDetailsViewController *)controller;
+- (void)accountDetailsViewControllerDidFinish:(AccountDetailsViewController *)controller withFacebook:(NSString *)facebook andTwitter:(NSString *)twitter;
 
 @end
 

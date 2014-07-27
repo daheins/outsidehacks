@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+#import "HTUser.h"
 #import "RegistrationViewController.h"
 #import "LandingViewController.h"
 
@@ -36,10 +37,19 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    RegistrationViewController *reg = [[RegistrationViewController alloc] init];
-    self.window.rootViewController = reg;
+    if ([HTUser defaultUser]) {
+        
+    } else {
+        RegistrationViewController *reg = [[RegistrationViewController alloc] init];
+        reg.registrationDelegate = self;
+        self.window.rootViewController = reg;
+    }
     
     return YES;
+}
+
+- (void)registrationViewControllerDidFinish:(RegistrationViewController *)controller {
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -10,6 +10,7 @@
 
 #import "AccountBasicsViewController.h"
 #import "AccountDetailsViewController.h"
+#import "HTUser.h"
 #import "LandingViewController.h"
 
 @interface RegistrationViewController () <LandingViewControllerDelegate, AccountBasicsViewControllerDelegate, AccountDetailsViewControllerDelegate>
@@ -53,8 +54,33 @@
 
 #pragma mark AccountDetailsViewControllerDelegate
 
-- (void)accountDetailsViewControllerDelegateDidFinish:(AccountDetailsViewController *)controller {
-    return;
+- (void)accountDetailsViewControllerDidFinish:(AccountDetailsViewController *)controller withFacebook:(NSString *)facebook andTwitter:(NSString *)twitter {
+    [self.userInfo setValue:facebook forKey:@"facebook"];
+    [self.userInfo setValue:twitter forKey:@"twitter"];
+    
+    HTUser *user = [HTUser createDefaultUserWithProperties:self.userInfo];
+    NSData *imageData = UIImageJPEGRepresentation(self.profileImage, 0.7);
+    
+    // get MIME type
+    NSString *mimeType;
+    uint8_t c;
+    [imageData getBytes:&c length:1];
+    switch (c) {
+        case 0xFF:
+            mimeType = @"image/jpeg";
+        case 0x89:
+            mimeType = @"image/png";
+        case 0x47:
+            mimeType = @"image/gif";
+        case 0x49:
+        case 0x4D:
+            mimeType = @"image/tiff";
+    }
+    
+    [user setAttachmentNamed:@"profilepic" withContentType:mimeType content:imageData];
+    [user save:nil];
+    
+    [self.registrationDelegate registrationViewControllerDidFinish:self];
 }
 
 @end

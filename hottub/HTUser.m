@@ -15,6 +15,8 @@
 #define defaultUserProperty @"userID"
 
 @dynamic name;
+@dynamic facebook;
+@dynamic twitter;
 
 + (HTUser *) defaultUser {
     NSError *error;
