@@ -10,7 +10,6 @@
 
 #import "HTUser.h"
 #import "RegistrationViewController.h"
-#import "LandingViewController.h"
 
 @implementation AppDelegate
 

@@ -31,6 +31,10 @@
 		6588E3D51984A35A00DDC675 /* CouchbaseLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6588E3D41984A35A00DDC675 /* CouchbaseLite.framework */; };
 		6588E3D61984A35A00DDC675 /* CouchbaseLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6588E3D41984A35A00DDC675 /* CouchbaseLite.framework */; };
 		6588E3D81984A40E00DDC675 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6588E3D71984A40E00DDC675 /* SystemConfiguration.framework */; };
+		6588E3E11984B73000DDC675 /* FindFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6588E3E01984B73000DDC675 /* FindFriendsViewController.m */; };
+		6588E3E41984B74300DDC675 /* ListFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6588E3E31984B74300DDC675 /* ListFriendsViewController.m */; };
+		6588E3E71984B75400DDC675 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6588E3E61984B75400DDC675 /* MainViewController.m */; };
+		6588E3EA1984B9E800DDC675 /* FriendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6588E3E91984B9E800DDC675 /* FriendTableViewCell.m */; };
 		6EAAC6FB198494D200B1315D /* WSMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAC6F6198494D200B1315D /* WSMLogger.m */; };
 		6EAAC6FC198494D200B1315D /* WSMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAC6F6198494D200B1315D /* WSMLogger.m */; };
 		6EAAC6FD198494D200B1315D /* WSMColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAC6F8198494D200B1315D /* WSMColorPalette.m */; };
@@ -93,6 +97,14 @@
 		650B298B19847CB80097CA76 /* AccountDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountDetailsViewController.m; sourceTree = "<group>"; };
 		6588E3D41984A35A00DDC675 /* CouchbaseLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CouchbaseLite.framework; sourceTree = "<group>"; };
 		6588E3D71984A40E00DDC675 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6588E3DF1984B73000DDC675 /* FindFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindFriendsViewController.h; sourceTree = "<group>"; };
+		6588E3E01984B73000DDC675 /* FindFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindFriendsViewController.m; sourceTree = "<group>"; };
+		6588E3E21984B74300DDC675 /* ListFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListFriendsViewController.h; sourceTree = "<group>"; };
+		6588E3E31984B74300DDC675 /* ListFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListFriendsViewController.m; sourceTree = "<group>"; };
+		6588E3E51984B75400DDC675 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		6588E3E61984B75400DDC675 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		6588E3E81984B9E800DDC675 /* FriendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendTableViewCell.h; sourceTree = "<group>"; };
+		6588E3E91984B9E800DDC675 /* FriendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendTableViewCell.m; sourceTree = "<group>"; };
 		6EAAC6F3198494D200B1315D /* WSMUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMUtilities.h; sourceTree = "<group>"; };
 		6EAAC6F4198494D200B1315D /* WSMMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMMacros.h; sourceTree = "<group>"; };
 		6EAAC6F5198494D200B1315D /* WSMLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMLogger.h; sourceTree = "<group>"; };
@@ -202,27 +214,14 @@
 			children = (
 				650B2963198455C30097CA76 /* AppDelegate.h */,
 				650B2964198455C30097CA76 /* AppDelegate.m */,
+				6588E3D91984B5BE00DDC675 /* InitialLaunchViews */,
+				6588E3DB1984B66E00DDC675 /* CoreViews */,
+				6588E3DA1984B66200DDC675 /* HTModels */,
+				5D3352531984A1060049584A /* UIImage+Resize.h */,
+				5D3352541984A1060049584A /* UIImage+Resize.m */,
 				650B2969198455C30097CA76 /* Images.xcassets */,
 				650B2966198455C30097CA76 /* hottub.xcdatamodeld */,
 				650B295B198455C20097CA76 /* Supporting Files */,
-				5D33524A19846F530049584A /* RegistrationViewController.h */,
-				5D33524B19846F530049584A /* RegistrationViewController.m */,
-				5D33524D198473F20049584A /* LandingViewController.h */,
-				5D33524E198473F20049584A /* LandingViewController.m */,
-				5D33525019847E140049584A /* AccountBasicsViewController.h */,
-				5D33525119847E140049584A /* AccountBasicsViewController.m */,
-				650B298A19847CB80097CA76 /* AccountDetailsViewController.h */,
-				650B298B19847CB80097CA76 /* AccountDetailsViewController.m */,
-				6EAAC70F198497E600B1315D /* HTAdvertiser.h */,
-				6EAAC710198497E600B1315D /* HTAdvertiser.m */,
-				6ED206A71984AFAD00645BBD /* HTUserManager.h */,
-				6ED206A81984AFAD00645BBD /* HTUserManager.m */,
-				6EAAC713198498AD00B1315D /* HTUser.h */,
-				6EAAC714198498AD00B1315D /* HTUser.m */,
-				6EAAC71F1984996300B1315D /* HTModel.h */,
-				6EAAC7201984996300B1315D /* HTModel.m */,
-				5D3352531984A1060049584A /* UIImage+Resize.h */,
-				5D3352541984A1060049584A /* UIImage+Resize.m */,
 			);
 			path = hottub;
 			sourceTree = "<group>";
@@ -255,6 +254,51 @@
 				650B297A198455C30097CA76 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6588E3D91984B5BE00DDC675 /* InitialLaunchViews */ = {
+			isa = PBXGroup;
+			children = (
+				5D33524A19846F530049584A /* RegistrationViewController.h */,
+				5D33524B19846F530049584A /* RegistrationViewController.m */,
+				5D33524D198473F20049584A /* LandingViewController.h */,
+				5D33524E198473F20049584A /* LandingViewController.m */,
+				5D33525019847E140049584A /* AccountBasicsViewController.h */,
+				5D33525119847E140049584A /* AccountBasicsViewController.m */,
+				650B298A19847CB80097CA76 /* AccountDetailsViewController.h */,
+				650B298B19847CB80097CA76 /* AccountDetailsViewController.m */,
+			);
+			name = InitialLaunchViews;
+			sourceTree = "<group>";
+		};
+		6588E3DA1984B66200DDC675 /* HTModels */ = {
+			isa = PBXGroup;
+			children = (
+				6EAAC70F198497E600B1315D /* HTAdvertiser.h */,
+				6EAAC710198497E600B1315D /* HTAdvertiser.m */,
+				6ED206A71984AFAD00645BBD /* HTUserManager.h */,
+				6ED206A81984AFAD00645BBD /* HTUserManager.m */,
+				6EAAC713198498AD00B1315D /* HTUser.h */,
+				6EAAC714198498AD00B1315D /* HTUser.m */,
+				6EAAC71F1984996300B1315D /* HTModel.h */,
+				6EAAC7201984996300B1315D /* HTModel.m */,
+			);
+			name = HTModels;
+			sourceTree = "<group>";
+		};
+		6588E3DB1984B66E00DDC675 /* CoreViews */ = {
+			isa = PBXGroup;
+			children = (
+				6588E3E51984B75400DDC675 /* MainViewController.h */,
+				6588E3E61984B75400DDC675 /* MainViewController.m */,
+				6588E3DF1984B73000DDC675 /* FindFriendsViewController.h */,
+				6588E3E01984B73000DDC675 /* FindFriendsViewController.m */,
+				6588E3E21984B74300DDC675 /* ListFriendsViewController.h */,
+				6588E3E31984B74300DDC675 /* ListFriendsViewController.m */,
+				6588E3E81984B9E800DDC675 /* FriendTableViewCell.h */,
+				6588E3E91984B9E800DDC675 /* FriendTableViewCell.m */,
+			);
+			name = CoreViews;
 			sourceTree = "<group>";
 		};
 		6EAAC701198494DE00B1315D /* Utilities */ = {
@@ -405,18 +449,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6588E3E41984B74300DDC675 /* ListFriendsViewController.m in Sources */,
 				650B2965198455C30097CA76 /* AppDelegate.m in Sources */,
 				6ED206A91984AFAD00645BBD /* HTUserManager.m in Sources */,
 				5D33525219847E140049584A /* AccountBasicsViewController.m in Sources */,
 				5D33524F198473F20049584A /* LandingViewController.m in Sources */,
 				5D33524C19846F530049584A /* RegistrationViewController.m in Sources */,
+				6588E3E11984B73000DDC675 /* FindFriendsViewController.m in Sources */,
 				650B2961198455C20097CA76 /* main.m in Sources */,
 				650B2968198455C30097CA76 /* hottub.xcdatamodeld in Sources */,
 				5D3352551984A1060049584A /* UIImage+Resize.m in Sources */,
 				650B298C19847CB80097CA76 /* AccountDetailsViewController.m in Sources */,
 				6EAAC6FD198494D200B1315D /* WSMColorPalette.m in Sources */,
 				6EAAC6FB198494D200B1315D /* WSMLogger.m in Sources */,
+				6588E3E71984B75400DDC675 /* MainViewController.m in Sources */,
 				6EAAC6FF198494D200B1315D /* CBLDatabase+WSMUtilities.m in Sources */,
+				6588E3EA1984B9E800DDC675 /* FriendTableViewCell.m in Sources */,
 				6EAAC7211984996300B1315D /* HTModel.m in Sources */,
 				6EAAC715198498AD00B1315D /* HTUser.m in Sources */,
 				6EAAC711198497E600B1315D /* HTAdvertiser.m in Sources */,
