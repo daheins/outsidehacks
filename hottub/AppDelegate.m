@@ -33,8 +33,8 @@
     logger[kWSMLogFormatKeyFile] = @16;
     logger[kWSMLogFormatKeyFunction] = @40;
     
-    [[HTUserManager sharedInstance] registerCapabilities:@[[HTAdvertiser sharedInstance],
-                                                           [HTScanner sharedInstance]]];
+//    [[HTUserManager sharedInstance] registerCapabilities:@[[HTAdvertiser sharedInstance],
+//                                                           [HTScanner sharedInstance]]];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

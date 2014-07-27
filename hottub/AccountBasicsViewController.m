@@ -20,6 +20,7 @@
 @property (nonatomic, strong) UIButton *profilePictureButton;
 @property (nonatomic, strong) UIImageView *profileImageView;
 @property (nonatomic, strong) UITextField *nameField;
+@property (nonatomic, strong) UIButton *backButton;
 @property (nonatomic, strong) UIButton *continueButton;
 
 @end
@@ -49,6 +50,10 @@
 
     self.continueButton.frame = CGRectMake(30.0, self.view.bounds.size.height - 100, self.view.bounds.size.width - 60.0, 30.0);
     [self.view addSubview:self.continueButton];
+    self.continueButton.enabled = NO;
+    
+    self.backButton.frame = CGRectMake(10.0, self.view.bounds.size.height - 70, self.view.bounds.size.width - 60.0, 30.0);
+    [self.view addSubview:self.backButton];
 }
 
 #pragma mark Properties
@@ -98,14 +103,26 @@
 
 - (UIButton *)continueButton {
     if (!_continueButton) {
-        _continueButton = [[UIButton alloc] initWithFrame:CGRectZero];
-        [_continueButton setTitle:@"Add account details" forState:UIControlStateNormal];
-        [_continueButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_continueButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+        _continueButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        [_continueButton setTitle:@"Next" forState:UIControlStateNormal];
         [_continueButton sizeToFit];
         [_continueButton addTarget:self action:@selector(onContinueButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _continueButton;
+}
+
+- (UIButton *)backButton {
+    if (!_backButton) {
+        _backButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        [_backButton setTitle:@"Back" forState:UIControlStateNormal];
+        [_backButton sizeToFit];
+        [_backButton addTarget:self action:@selector(onBackButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _backButton;
+}
+
+- (void)updateContinueButton {
+    self.continueButton.enabled = [self.nameField hasText] > 0 && self.profileImageView.image;
 }
 
 #pragma mark Selectors
@@ -119,6 +136,10 @@
     [self presentViewController:picker animated:YES completion:NULL];
 }
 
+- (void)onBackButtonTapped:(UIButton *)button {
+    [self.delegate accountBasicsViewControllerDidGoBack:self];
+}
+
 #pragma mark UITextFieldDelegate
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -127,6 +148,10 @@
         return NO;
     }
     return YES;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    [self updateContinueButton];
 }
 
 #pragma mark UIImagePickerDelegate
@@ -139,6 +164,7 @@
     [self.view addSubview:self.profileImageView];
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
+    [self updateContinueButton];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {

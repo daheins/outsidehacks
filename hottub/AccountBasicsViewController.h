@@ -13,6 +13,7 @@
 @protocol AccountBasicsViewControllerDelegate <NSObject>
 
 - (void)accountBasicsViewControllerDidFinish:(AccountBasicsViewController *)controller withName:(NSString *)name andImage: (UIImage *)image;
+- (void)accountBasicsViewControllerDidGoBack:(AccountBasicsViewController *)controller;
 
 @end
 

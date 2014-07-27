@@ -18,6 +18,9 @@
 @property (nonatomic, strong) NSMutableDictionary *userInfo;
 @property (nonatomic, strong) UIImage *profileImage;
 
+@property (nonatomic, strong) AccountBasicsViewController *accountBasicsViewController;
+@property (nonatomic, strong) AccountDetailsViewController *accountDetailsViewController;
+
 @end
 
 @implementation RegistrationViewController
@@ -44,9 +47,9 @@
 #pragma mark LandingViewControllerDelegate
 
 - (void)landingViewControllerDidFinish:(LandingViewController *)controller {
-    AccountBasicsViewController *abvc = [[AccountBasicsViewController alloc] init];
-    abvc.delegate = self;
-    [self pushViewController:abvc animated:YES];
+    self.accountBasicsViewController = [[AccountBasicsViewController alloc] init];
+    self.accountBasicsViewController.delegate = self;
+    [self pushViewController:self.accountBasicsViewController animated:YES];
 }
 
 #pragma mark AccountBasicsViewControllerDelegate
@@ -55,12 +58,20 @@
     [self.userInfo setObject:name forKey:@"name"];
     self.profileImage = image;
     
-    AccountDetailsViewController *advc = [[AccountDetailsViewController alloc] init];
-    advc.delegate = self;
-    [self pushViewController:advc animated:YES];
+    self.accountDetailsViewController = [[AccountDetailsViewController alloc] init];
+    self.accountDetailsViewController.delegate = self;
+    [self pushViewController:self.accountDetailsViewController animated:YES];
+}
+
+- (void)accountBasicsViewControllerDidGoBack:(AccountBasicsViewController *)controller {
+    [self popToRootViewControllerAnimated:YES];
 }
 
 #pragma mark AccountDetailsViewControllerDelegate
+
+- (void)accountDetailsViewControllerDidGoBack:(AccountBasicsViewController *)controller {
+    [self popToViewController:self.accountBasicsViewController animated:YES];
+}
 
 - (void)accountDetailsViewControllerDidFinish:(AccountDetailsViewController *)controller withFacebook:(NSString *)facebook andTwitter:(NSString *)twitter {
     NSNumber *random = [NSNumber numberWithInt:arc4random()];

@@ -30,6 +30,7 @@
 @property (nonatomic, strong) NSString *twitterUsername;
 
 @property (nonatomic, strong) UIButton *finishButton;
+@property (nonatomic, strong) UIButton *backButton;
 
 @end
 
@@ -85,6 +86,9 @@
 
     self.finishButton.frame = CGRectMake(screenMid + 20.0, 400, 100, 30);
     [self.view addSubview:self.finishButton];
+    
+    self.backButton.frame = CGRectMake(screenMid + 20.0, 440, 100, 30);
+    [self.view addSubview:self.backButton];
 }
 
 #pragma mark Properties
@@ -189,6 +193,16 @@
     return _finishButton;
 }
 
+- (UIButton *)backButton {
+    if (!_backButton) {
+        _backButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        [_backButton setTitle:@"Back" forState:UIControlStateNormal];
+        [_backButton sizeToFit];
+        [_backButton addTarget:self action:@selector(onBackButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _backButton;
+}
+
 #pragma mark Selectors
 
 - (void)onFacebookButtonTapped:(UIButton *)button {
@@ -219,6 +233,10 @@
             NSLog(@"Error: %@", error);
         }
     }];
+}
+
+- (void)onBackButtonTapped:(UIButton *)button {
+    [self.delegate accountDetailsViewControllerDidGoBack:self];
 }
 
 - (void)onTwitterButtonTapped:(UIButton *)button {
