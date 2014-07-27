@@ -7,7 +7,7 @@
 //
 
 #import "ListFriendsViewController.h"
-#import "FriendTableViewCell.h"
+#import "UserTableViewCell.h"
 
 @interface ListFriendsViewController ()
 
@@ -31,12 +31,13 @@
     [super viewDidLoad];
 
     [self.view addSubview:self.friendsList];
+    [self.view setBackgroundColor:[UIColor redColor]];
     [self updateFriendsList];
 
 }
 
 - (void)updateFriendsList {
-    FriendTableViewCell *cell = [[FriendTableViewCell alloc] initWithFrame:CGRectMake(0, 0, 20, 30)];
+    UserTableViewCell *cell = [[UserTableViewCell alloc] initWithFrame:CGRectMake(0, 0, 20, 30)];
 
     [_friendsList insertSubview:cell atIndex:0];
 }
