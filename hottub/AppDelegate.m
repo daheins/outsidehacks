@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 
 #import "RegistrationViewController.h"
-#import "LandingViewController.h"
 
 @implementation AppDelegate
 

@@ -34,6 +34,7 @@
 		6588E3E11984B73000DDC675 /* FindFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6588E3E01984B73000DDC675 /* FindFriendsViewController.m */; };
 		6588E3E41984B74300DDC675 /* ListFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6588E3E31984B74300DDC675 /* ListFriendsViewController.m */; };
 		6588E3E71984B75400DDC675 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6588E3E61984B75400DDC675 /* MainViewController.m */; };
+		6588E3EA1984B9E800DDC675 /* FriendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6588E3E91984B9E800DDC675 /* FriendTableViewCell.m */; };
 		6EAAC6FB198494D200B1315D /* WSMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAC6F6198494D200B1315D /* WSMLogger.m */; };
 		6EAAC6FC198494D200B1315D /* WSMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAC6F6198494D200B1315D /* WSMLogger.m */; };
 		6EAAC6FD198494D200B1315D /* WSMColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAC6F8198494D200B1315D /* WSMColorPalette.m */; };
@@ -102,6 +103,8 @@
 		6588E3E31984B74300DDC675 /* ListFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListFriendsViewController.m; sourceTree = "<group>"; };
 		6588E3E51984B75400DDC675 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		6588E3E61984B75400DDC675 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		6588E3E81984B9E800DDC675 /* FriendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendTableViewCell.h; sourceTree = "<group>"; };
+		6588E3E91984B9E800DDC675 /* FriendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendTableViewCell.m; sourceTree = "<group>"; };
 		6EAAC6F3198494D200B1315D /* WSMUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMUtilities.h; sourceTree = "<group>"; };
 		6EAAC6F4198494D200B1315D /* WSMMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMMacros.h; sourceTree = "<group>"; };
 		6EAAC6F5198494D200B1315D /* WSMLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMLogger.h; sourceTree = "<group>"; };
@@ -292,6 +295,8 @@
 				6588E3E01984B73000DDC675 /* FindFriendsViewController.m */,
 				6588E3E21984B74300DDC675 /* ListFriendsViewController.h */,
 				6588E3E31984B74300DDC675 /* ListFriendsViewController.m */,
+				6588E3E81984B9E800DDC675 /* FriendTableViewCell.h */,
+				6588E3E91984B9E800DDC675 /* FriendTableViewCell.m */,
 			);
 			name = CoreViews;
 			sourceTree = "<group>";
@@ -459,6 +464,7 @@
 				6EAAC6FB198494D200B1315D /* WSMLogger.m in Sources */,
 				6588E3E71984B75400DDC675 /* MainViewController.m in Sources */,
 				6EAAC6FF198494D200B1315D /* CBLDatabase+WSMUtilities.m in Sources */,
+				6588E3EA1984B9E800DDC675 /* FriendTableViewCell.m in Sources */,
 				6EAAC7211984996300B1315D /* HTModel.m in Sources */,
 				6EAAC715198498AD00B1315D /* HTUser.m in Sources */,
 				6EAAC711198497E600B1315D /* HTAdvertiser.m in Sources */,
