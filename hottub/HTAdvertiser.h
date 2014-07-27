@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HTAdvertiser : NSObject
+@interface HTAdvertiser : NSObject <CBPeripheralManagerDelegate>
+
++ (instancetype)sharedInstance;
 
 @end
