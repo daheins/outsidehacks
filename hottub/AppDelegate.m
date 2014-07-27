@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "HTUser.h"
+#import "MainViewController.h"
 #import "RegistrationViewController.h"
 
 @implementation AppDelegate
@@ -36,19 +37,20 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    if ([HTUser defaultUser]) {
-        
-    } else {
+//    if ([HTUser defaultUser]) {
+//        
+//    } else {
         RegistrationViewController *reg = [[RegistrationViewController alloc] init];
         reg.registrationDelegate = self;
         self.window.rootViewController = reg;
-    }
+//    }
     
     return YES;
 }
 
 - (void)registrationViewControllerDidFinish:(RegistrationViewController *)controller {
-    
+    MainViewController *mvc = [[MainViewController alloc] init];
+    self.window.rootViewController = mvc;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -55,30 +55,32 @@
 #pragma mark AccountDetailsViewControllerDelegate
 
 - (void)accountDetailsViewControllerDidFinish:(AccountDetailsViewController *)controller withFacebook:(NSString *)facebook andTwitter:(NSString *)twitter {
+    NSNumber *random = [NSNumber numberWithInt: arc4random()];
+    [self.userInfo setValue:random forKey:@"id"];
     [self.userInfo setValue:facebook forKey:@"facebook"];
     [self.userInfo setValue:twitter forKey:@"twitter"];
     
-    HTUser *user = [HTUser createDefaultUserWithProperties:self.userInfo];
-    NSData *imageData = UIImageJPEGRepresentation(self.profileImage, 0.7);
-    
-    // get MIME type
-    NSString *mimeType;
-    uint8_t c;
-    [imageData getBytes:&c length:1];
-    switch (c) {
-        case 0xFF:
-            mimeType = @"image/jpeg";
-        case 0x89:
-            mimeType = @"image/png";
-        case 0x47:
-            mimeType = @"image/gif";
-        case 0x49:
-        case 0x4D:
-            mimeType = @"image/tiff";
-    }
-    
-    [user setAttachmentNamed:@"profilepic" withContentType:mimeType content:imageData];
-    [user save:nil];
+//    HTUser *user = [HTUser createDefaultUserWithProperties:self.userInfo];
+//    NSData *imageData = UIImageJPEGRepresentation(self.profileImage, 0.7);
+//    
+//    // get MIME type
+//    NSString *mimeType;
+//    uint8_t c;
+//    [imageData getBytes:&c length:1];
+//    switch (c) {
+//        case 0xFF:
+//            mimeType = @"image/jpeg";
+//        case 0x89:
+//            mimeType = @"image/png";
+//        case 0x47:
+//            mimeType = @"image/gif";
+//        case 0x49:
+//        case 0x4D:
+//            mimeType = @"image/tiff";
+//    }
+//    
+//    [user setAttachmentNamed:@"profilepic" withContentType:mimeType content:imageData];
+//    [user save:nil];
     
     [self.registrationDelegate registrationViewControllerDidFinish:self];
 }

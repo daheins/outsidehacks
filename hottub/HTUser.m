@@ -22,7 +22,13 @@
     NSError *error;
     CBLDatabase *db = [[CBLManager sharedInstance] databaseNamed:localUsersDB error:&error];
     CBLDocument *doc = [db documentWithID:defaultUserDocument];
-    HTUser *user = [HTUser modelForDocument: [db documentWithID:doc[defaultUserProperty]]];
+    HTUser *user;
+    if (doc) {
+        user = [HTUser modelForDocument: [db documentWithID:doc[defaultUserProperty]]];
+    } else {
+        return nil;
+    }
+    
     
     return doc[defaultUserProperty] ? ({
         [user registerLocalDatabaseViews];
