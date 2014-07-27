@@ -45,7 +45,8 @@
     [self.window makeKeyAndVisible];
     
 //    if ([HTUser defaultUser]) {
-//        
+//        MainViewController *mvc = [[MainViewController alloc] init];
+//        self.window.rootViewController = mvc;
 //    } else {
         RegistrationViewController *reg = [[RegistrationViewController alloc] init];
         reg.registrationDelegate = self;
