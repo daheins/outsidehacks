@@ -35,6 +35,8 @@
 		6588E3E41984B74300DDC675 /* ListFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6588E3E31984B74300DDC675 /* ListFriendsViewController.m */; };
 		6588E3E71984B75400DDC675 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6588E3E61984B75400DDC675 /* MainViewController.m */; };
 		6588E3EA1984B9E800DDC675 /* FriendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6588E3E91984B9E800DDC675 /* FriendTableViewCell.m */; };
+		6E306EA91984BD9F00E25CA4 /* HTScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E306EA81984BD9F00E25CA4 /* HTScanner.m */; };
+		6E306EAA1984BD9F00E25CA4 /* HTScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E306EA81984BD9F00E25CA4 /* HTScanner.m */; };
 		6EAAC6FB198494D200B1315D /* WSMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAC6F6198494D200B1315D /* WSMLogger.m */; };
 		6EAAC6FC198494D200B1315D /* WSMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAC6F6198494D200B1315D /* WSMLogger.m */; };
 		6EAAC6FD198494D200B1315D /* WSMColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAC6F8198494D200B1315D /* WSMColorPalette.m */; };
@@ -105,6 +107,8 @@
 		6588E3E61984B75400DDC675 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		6588E3E81984B9E800DDC675 /* FriendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendTableViewCell.h; sourceTree = "<group>"; };
 		6588E3E91984B9E800DDC675 /* FriendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendTableViewCell.m; sourceTree = "<group>"; };
+		6E306EA71984BD9F00E25CA4 /* HTScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTScanner.h; sourceTree = "<group>"; };
+		6E306EA81984BD9F00E25CA4 /* HTScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTScanner.m; sourceTree = "<group>"; };
 		6EAAC6F3198494D200B1315D /* WSMUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMUtilities.h; sourceTree = "<group>"; };
 		6EAAC6F4198494D200B1315D /* WSMMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMMacros.h; sourceTree = "<group>"; };
 		6EAAC6F5198494D200B1315D /* WSMLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMLogger.h; sourceTree = "<group>"; };
@@ -276,6 +280,8 @@
 			children = (
 				6EAAC70F198497E600B1315D /* HTAdvertiser.h */,
 				6EAAC710198497E600B1315D /* HTAdvertiser.m */,
+				6E306EA71984BD9F00E25CA4 /* HTScanner.h */,
+				6E306EA81984BD9F00E25CA4 /* HTScanner.m */,
 				6ED206A71984AFAD00645BBD /* HTUserManager.h */,
 				6ED206A81984AFAD00645BBD /* HTUserManager.m */,
 				6EAAC713198498AD00B1315D /* HTUser.h */,
@@ -367,6 +373,11 @@
 				TargetAttributes = {
 					650B294E198455C20097CA76 = {
 						DevelopmentTeam = BM6B69ZQSR;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					650B296E198455C30097CA76 = {
 						TestTargetID = 650B294E198455C20097CA76;
@@ -465,6 +476,7 @@
 				6588E3E71984B75400DDC675 /* MainViewController.m in Sources */,
 				6EAAC6FF198494D200B1315D /* CBLDatabase+WSMUtilities.m in Sources */,
 				6588E3EA1984B9E800DDC675 /* FriendTableViewCell.m in Sources */,
+				6E306EA91984BD9F00E25CA4 /* HTScanner.m in Sources */,
 				6EAAC7211984996300B1315D /* HTModel.m in Sources */,
 				6EAAC715198498AD00B1315D /* HTUser.m in Sources */,
 				6EAAC711198497E600B1315D /* HTAdvertiser.m in Sources */,
@@ -477,6 +489,7 @@
 			files = (
 				6ED206AA1984AFAD00645BBD /* HTUserManager.m in Sources */,
 				6EAAC712198497E600B1315D /* HTAdvertiser.m in Sources */,
+				6E306EAA1984BD9F00E25CA4 /* HTScanner.m in Sources */,
 				650B297E198455C30097CA76 /* hottubTests.m in Sources */,
 				6EAAC700198494D200B1315D /* CBLDatabase+WSMUtilities.m in Sources */,
 				6EAAC6FC198494D200B1315D /* WSMLogger.m in Sources */,

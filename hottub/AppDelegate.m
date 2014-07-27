@@ -11,6 +11,10 @@
 #import "HTUser.h"
 #import "RegistrationViewController.h"
 
+#import "HTUserManager.h"
+#import "HTAdvertiser.h"
+#import "HTScanner.h"
+
 @implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -27,6 +31,9 @@
     logger.formatStyle = kWSMLogFormatStyleQueue;
     logger[kWSMLogFormatKeyFile] = @16;
     logger[kWSMLogFormatKeyFunction] = @40;
+    
+    [[HTUserManager sharedInstance] registerCapabilities:@[[HTAdvertiser sharedInstance],
+                                                           [HTScanner sharedInstance]]];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
