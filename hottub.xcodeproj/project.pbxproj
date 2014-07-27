@@ -28,14 +28,15 @@
 		650B297C198455C30097CA76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 650B297A198455C30097CA76 /* InfoPlist.strings */; };
 		650B297E198455C30097CA76 /* hottubTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B297D198455C30097CA76 /* hottubTests.m */; };
 		650B298C19847CB80097CA76 /* AccountDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B298B19847CB80097CA76 /* AccountDetailsViewController.m */; };
+		6588E3D51984A35A00DDC675 /* CouchbaseLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6588E3D41984A35A00DDC675 /* CouchbaseLite.framework */; };
+		6588E3D61984A35A00DDC675 /* CouchbaseLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6588E3D41984A35A00DDC675 /* CouchbaseLite.framework */; };
+		6588E3D81984A40E00DDC675 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6588E3D71984A40E00DDC675 /* SystemConfiguration.framework */; };
 		6EAAC6FB198494D200B1315D /* WSMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAC6F6198494D200B1315D /* WSMLogger.m */; };
 		6EAAC6FC198494D200B1315D /* WSMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAC6F6198494D200B1315D /* WSMLogger.m */; };
 		6EAAC6FD198494D200B1315D /* WSMColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAC6F8198494D200B1315D /* WSMColorPalette.m */; };
 		6EAAC6FE198494D200B1315D /* WSMColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAC6F8198494D200B1315D /* WSMColorPalette.m */; };
 		6EAAC6FF198494D200B1315D /* CBLDatabase+WSMUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAC6FA198494D200B1315D /* CBLDatabase+WSMUtilities.m */; };
 		6EAAC700198494D200B1315D /* CBLDatabase+WSMUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAC6FA198494D200B1315D /* CBLDatabase+WSMUtilities.m */; };
-		6EAAC7031984951300B1315D /* CouchbaseLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAAC7021984951300B1315D /* CouchbaseLite.framework */; };
-		6EAAC7041984951400B1315D /* CouchbaseLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAAC7021984951300B1315D /* CouchbaseLite.framework */; };
 		6EAAC7061984952000B1315D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAAC7051984952000B1315D /* libz.dylib */; };
 		6EAAC7081984952700B1315D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAAC7071984952700B1315D /* libsqlite3.dylib */; };
 		6EAAC70A1984953900B1315D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAAC7091984953900B1315D /* CFNetwork.framework */; };
@@ -88,6 +89,8 @@
 		650B297D198455C30097CA76 /* hottubTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hottubTests.m; sourceTree = "<group>"; };
 		650B298A19847CB80097CA76 /* AccountDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountDetailsViewController.h; sourceTree = "<group>"; };
 		650B298B19847CB80097CA76 /* AccountDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountDetailsViewController.m; sourceTree = "<group>"; };
+		6588E3D41984A35A00DDC675 /* CouchbaseLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CouchbaseLite.framework; sourceTree = "<group>"; };
+		6588E3D71984A40E00DDC675 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6EAAC6F3198494D200B1315D /* WSMUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMUtilities.h; sourceTree = "<group>"; };
 		6EAAC6F4198494D200B1315D /* WSMMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMMacros.h; sourceTree = "<group>"; };
 		6EAAC6F5198494D200B1315D /* WSMLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMLogger.h; sourceTree = "<group>"; };
@@ -96,7 +99,6 @@
 		6EAAC6F8198494D200B1315D /* WSMColorPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSMColorPalette.m; sourceTree = "<group>"; };
 		6EAAC6F9198494D200B1315D /* CBLDatabase+WSMUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBLDatabase+WSMUtilities.h"; sourceTree = "<group>"; };
 		6EAAC6FA198494D200B1315D /* CBLDatabase+WSMUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBLDatabase+WSMUtilities.m"; sourceTree = "<group>"; };
-		6EAAC7021984951300B1315D /* CouchbaseLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CouchbaseLite.framework; sourceTree = "<group>"; };
 		6EAAC7051984952000B1315D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		6EAAC7071984952700B1315D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		6EAAC7091984953900B1315D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -117,16 +119,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6588E3D81984A40E00DDC675 /* SystemConfiguration.framework in Frameworks */,
+				650B2955198455C20097CA76 /* CoreGraphics.framework in Frameworks */,
+				650B2959198455C20097CA76 /* CoreData.framework in Frameworks */,
+				650B2957198455C20097CA76 /* UIKit.framework in Frameworks */,
+				650B2953198455C20097CA76 /* Foundation.framework in Frameworks */,
 				650B2959198455C20097CA76 /* CoreData.framework in Frameworks */,
 				6EAAC70E1984954D00B1315D /* CoreBluetooth.framework in Frameworks */,
 				6EAAC70C1984954000B1315D /* Security.framework in Frameworks */,
 				6EAAC70A1984953900B1315D /* CFNetwork.framework in Frameworks */,
 				6EAAC7081984952700B1315D /* libsqlite3.dylib in Frameworks */,
 				6EAAC7061984952000B1315D /* libz.dylib in Frameworks */,
+				6588E3D51984A35A00DDC675 /* CouchbaseLite.framework in Frameworks */,
 				650B2955198455C20097CA76 /* CoreGraphics.framework in Frameworks */,
 				650B2957198455C20097CA76 /* UIKit.framework in Frameworks */,
 				650B2953198455C20097CA76 /* Foundation.framework in Frameworks */,
-				6EAAC7031984951300B1315D /* CouchbaseLite.framework in Frameworks */,
 				609853BEAE19462A9F70A30C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,7 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EAAC7041984951400B1315D /* CouchbaseLite.framework in Frameworks */,
+				6588E3D61984A35A00DDC675 /* CouchbaseLite.framework in Frameworks */,
 				650B2971198455C30097CA76 /* XCTest.framework in Frameworks */,
 				650B2974198455C30097CA76 /* CoreData.framework in Frameworks */,
 				650B2973198455C30097CA76 /* UIKit.framework in Frameworks */,
@@ -169,12 +176,13 @@
 		650B2951198455C20097CA76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6588E3D71984A40E00DDC675 /* SystemConfiguration.framework */,
+				6588E3D41984A35A00DDC675 /* CouchbaseLite.framework */,
 				6EAAC70D1984954D00B1315D /* CoreBluetooth.framework */,
 				6EAAC70B1984954000B1315D /* Security.framework */,
 				6EAAC7091984953900B1315D /* CFNetwork.framework */,
 				6EAAC7071984952700B1315D /* libsqlite3.dylib */,
 				6EAAC7051984952000B1315D /* libz.dylib */,
-				6EAAC7021984951300B1315D /* CouchbaseLite.framework */,
 				650B2952198455C20097CA76 /* Foundation.framework */,
 				650B2954198455C20097CA76 /* CoreGraphics.framework */,
 				650B2956198455C20097CA76 /* UIKit.framework */,
@@ -190,8 +198,6 @@
 			children = (
 				650B2963198455C30097CA76 /* AppDelegate.h */,
 				650B2964198455C30097CA76 /* AppDelegate.m */,
-				650B298A19847CB80097CA76 /* AccountDetailsViewController.h */,
-				650B298B19847CB80097CA76 /* AccountDetailsViewController.m */,
 				650B2969198455C30097CA76 /* Images.xcassets */,
 				650B2966198455C30097CA76 /* hottub.xcdatamodeld */,
 				650B295B198455C20097CA76 /* Supporting Files */,
@@ -201,6 +207,8 @@
 				5D33524E198473F20049584A /* LandingViewController.m */,
 				5D33525019847E140049584A /* AccountBasicsViewController.h */,
 				5D33525119847E140049584A /* AccountBasicsViewController.m */,
+				650B298A19847CB80097CA76 /* AccountDetailsViewController.h */,
+				650B298B19847CB80097CA76 /* AccountDetailsViewController.m */,
 				6EAAC70F198497E600B1315D /* HTAdvertiser.h */,
 				6EAAC710198497E600B1315D /* HTAdvertiser.m */,
 				6EAAC713198498AD00B1315D /* HTUser.h */,
@@ -396,11 +404,11 @@
 				5D33524F198473F20049584A /* LandingViewController.m in Sources */,
 				5D33524C19846F530049584A /* RegistrationViewController.m in Sources */,
 				650B2961198455C20097CA76 /* main.m in Sources */,
-				6EAAC6FD198494D200B1315D /* WSMColorPalette.m in Sources */,
-				6EAAC6FB198494D200B1315D /* WSMLogger.m in Sources */,
 				650B2968198455C30097CA76 /* hottub.xcdatamodeld in Sources */,
 				5D3352551984A1060049584A /* UIImage+Resize.m in Sources */,
 				650B298C19847CB80097CA76 /* AccountDetailsViewController.m in Sources */,
+				6EAAC6FD198494D200B1315D /* WSMColorPalette.m in Sources */,
+				6EAAC6FB198494D200B1315D /* WSMLogger.m in Sources */,
 				6EAAC6FF198494D200B1315D /* CBLDatabase+WSMUtilities.m in Sources */,
 				6EAAC7211984996300B1315D /* HTModel.m in Sources */,
 				6EAAC715198498AD00B1315D /* HTUser.m in Sources */,
@@ -534,11 +542,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/danielheins/Downloads,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "hottub/hottub-Prefix.pch";
 				INFOPLIST_FILE = "hottub/hottub-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -553,11 +564,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/danielheins/Downloads,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "hottub/hottub-Prefix.pch";
 				INFOPLIST_FILE = "hottub/hottub-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

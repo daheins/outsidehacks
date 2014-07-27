@@ -10,6 +10,16 @@
 #import <Social/Social.h>
 #import <Accounts/Accounts.h>
 
+@class AccountDetailsViewController;
+
+@protocol AccountDetailsViewControllerDelegate <NSObject>
+
+- (void)accountDetailsViewControllerDelegateDidFinish:(AccountDetailsViewController *)controller;
+
+@end
+
 @interface AccountDetailsViewController : UIViewController
+
+@property (nonatomic, weak) id<AccountDetailsViewControllerDelegate> delegate;
 
 @end

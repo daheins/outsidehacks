@@ -20,6 +20,7 @@
 @property (nonatomic, strong) UIButton *profilePictureButton;
 @property (nonatomic, strong) UIImageView *profileImageView;
 @property (nonatomic, strong) UITextField *nameField;
+@property (nonatomic, strong) UIButton *continueButton;
 
 @end
 
@@ -45,6 +46,9 @@
     
     self.nameField.frame = CGRectMake(20.0, self.profilePictureButton.frame.origin.y - 60.0, self.nameField.frame.size.width, self.nameField.frame.size.height);
     [self.view addSubview:self.nameField];
+
+    self.continueButton.frame = CGRectMake(30.0, self.view.bounds.size.height - 100, self.view.bounds.size.width - 60.0, 30.0);
+    [self.view addSubview:self.continueButton];
 }
 
 #pragma mark Properties
@@ -92,6 +96,18 @@
     return _nameField;
 }
 
+- (UIButton *)continueButton {
+    if (!_continueButton) {
+        _continueButton = [[UIButton alloc] initWithFrame:CGRectZero];
+        [_continueButton setTitle:@"Add account details" forState:UIControlStateNormal];
+        [_continueButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_continueButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+        [_continueButton sizeToFit];
+        [_continueButton addTarget:self action:@selector(onContinueButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _continueButton;
+}
+
 #pragma mark Selectors
 
 - (void)onProfilePictureButtonTapped:(UIButton *)button {
@@ -127,6 +143,10 @@
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)onContinueButtonTapped:(UIButton *)button {
+    [self.delegate accountBasicsViewControllerDelegateDidFinish:self];
 }
 
 @end

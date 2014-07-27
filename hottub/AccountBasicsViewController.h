@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class AccountBasicsViewController;
+
+@protocol AccountBasicsViewControllerDelegate <NSObject>
+
+- (void)accountBasicsViewControllerDelegateDidFinish:(AccountBasicsViewController *)controller;
+
+@end
+
 @interface AccountBasicsViewController : UIViewController
+
+@property (nonatomic, weak) id<AccountBasicsViewControllerDelegate> delegate;
 
 @end
