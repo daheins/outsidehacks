@@ -11,6 +11,8 @@
 
 @interface HTUser : HTModel
 
+@property (nonatomic, strong) NSString *name;
+
 + (HTUser *) defaultUser;
 
 + (void) setDefaultUser:(HTUser *)user;

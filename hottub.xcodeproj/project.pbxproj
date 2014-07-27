@@ -201,6 +201,12 @@
 				5D33524E198473F20049584A /* LandingViewController.m */,
 				5D33525019847E140049584A /* AccountBasicsViewController.h */,
 				5D33525119847E140049584A /* AccountBasicsViewController.m */,
+				6EAAC70F198497E600B1315D /* HTAdvertiser.h */,
+				6EAAC710198497E600B1315D /* HTAdvertiser.m */,
+				6EAAC713198498AD00B1315D /* HTUser.h */,
+				6EAAC714198498AD00B1315D /* HTUser.m */,
+				6EAAC71F1984996300B1315D /* HTModel.h */,
+				6EAAC7201984996300B1315D /* HTModel.m */,
 				5D3352531984A1060049584A /* UIImage+Resize.h */,
 				5D3352541984A1060049584A /* UIImage+Resize.m */,
 			);

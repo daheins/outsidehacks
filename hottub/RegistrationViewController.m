@@ -13,6 +13,8 @@
 
 @interface RegistrationViewController () <LandingViewControllerDelegate>
 
+@property (nonatomic, strong) NSDictionary *userInfo;
+
 @end
 
 @implementation RegistrationViewController
