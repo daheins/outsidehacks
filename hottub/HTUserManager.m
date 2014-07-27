@@ -67,10 +67,10 @@ WSM_SINGLETON_WITH_NAME(sharedInstance)
 }
 
 - (void) deriveGlobalState:(NSArray *)signals {
-    NSAssert(signals.count == 1, @"This is a hackathon.");
+    NSAssert(signals.count == 2, @"This is a hackathon.");
     self.currentStateSignal = [RACSignal combineLatest:signals];
     
-    RAC(self, managerState) = [self.currentStateSignal reduceEach:^(NSNumber *state1) {
+    RAC(self, managerState) = [self.currentStateSignal reduceEach:^(NSNumber *state1, NSNumber *state2) {
         NSLog(@"Latest!");
         return @0;
     }];
