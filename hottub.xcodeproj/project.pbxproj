@@ -22,6 +22,7 @@
 		650B2974198455C30097CA76 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650B2958198455C20097CA76 /* CoreData.framework */; };
 		650B297C198455C30097CA76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 650B297A198455C30097CA76 /* InfoPlist.strings */; };
 		650B297E198455C30097CA76 /* hottubTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B297D198455C30097CA76 /* hottubTests.m */; };
+		650B298C19847CB80097CA76 /* AccountDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B298B19847CB80097CA76 /* AccountDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		650B2979198455C30097CA76 /* hottubTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hottubTests-Info.plist"; sourceTree = "<group>"; };
 		650B297B198455C30097CA76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		650B297D198455C30097CA76 /* hottubTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hottubTests.m; sourceTree = "<group>"; };
+		650B298A19847CB80097CA76 /* AccountDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountDetailsViewController.h; sourceTree = "<group>"; };
+		650B298B19847CB80097CA76 /* AccountDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 			children = (
 				650B2963198455C30097CA76 /* AppDelegate.h */,
 				650B2964198455C30097CA76 /* AppDelegate.m */,
+				650B298A19847CB80097CA76 /* AccountDetailsViewController.h */,
+				650B298B19847CB80097CA76 /* AccountDetailsViewController.m */,
 				650B2969198455C30097CA76 /* Images.xcassets */,
 				650B2966198455C30097CA76 /* hottub.xcdatamodeld */,
 				650B295B198455C20097CA76 /* Supporting Files */,
@@ -200,6 +205,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = daheins;
 				TargetAttributes = {
+					650B294E198455C20097CA76 = {
+						DevelopmentTeam = BM6B69ZQSR;
+					};
 					650B296E198455C30097CA76 = {
 						TestTargetID = 650B294E198455C20097CA76;
 					};
@@ -251,6 +259,7 @@
 				650B2965198455C30097CA76 /* AppDelegate.m in Sources */,
 				650B2961198455C20097CA76 /* main.m in Sources */,
 				650B2968198455C30097CA76 /* hottub.xcdatamodeld in Sources */,
+				650B298C19847CB80097CA76 /* AccountDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +378,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "hottub/hottub-Prefix.pch";
 				INFOPLIST_FILE = "hottub/hottub-Info.plist";
@@ -382,6 +392,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "hottub/hottub-Prefix.pch";
 				INFOPLIST_FILE = "hottub/hottub-Info.plist";
