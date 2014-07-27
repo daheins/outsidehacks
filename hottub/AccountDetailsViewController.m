@@ -10,6 +10,11 @@
 
 @interface AccountDetailsViewController ()
 
+@property (nonatomic, strong) UILabel *infoLabel;
+
+@property (nonatomic, strong) UIButton *numberButton;
+@property (nonatomic, strong) UILabel *numberLabel;
+
 @property (nonatomic, strong) UIButton *facebookButton;
 @property (nonatomic, strong) UILabel *facebookLabel;
 
@@ -32,13 +37,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+    self.infoLabel.center = CGPointMake(self.view.bounds.size.width/2.0, 50);
+    [self.view addSubview:self.infoLabel];
+
     self.facebookButton.frame = CGRectMake(self.view.bounds.size.width/2.0, 100, 200, 30);
     self.facebookButton.center = CGPointMake(self.view.bounds.size.width/2.0, 100);
     [self.view addSubview:self.facebookButton];
     self.facebookLabel.center = CGPointMake(self.view.bounds.size.width/2.0, 100);
     self.facebookLabel.hidden = YES;
     [self.view addSubview:self.facebookLabel];
-
 
     self.twitterButton.frame = CGRectMake(self.view.bounds.size.width/2.0, 200, 200, 30);
     self.twitterButton.center = CGPointMake(self.view.bounds.size.width/2.0, 150);
@@ -50,6 +57,16 @@
 }
 
 #pragma mark Properties
+
+- (UILabel *)infoLabel {
+    if (!_infoLabel) {
+        _infoLabel = [[UILabel alloc] init];
+        [_infoLabel setText:@"Add your contact info:"];
+        [_infoLabel setTextColor:[UIColor blackColor]];
+        [_infoLabel sizeToFit];
+    }
+    return _infoLabel;
+}
 
 - (UIButton *)facebookButton {
     if (!_facebookButton) {
@@ -126,6 +143,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.facebookLabel.text = [NSString stringWithFormat:@"FB Username: %@", username];
                 [self.facebookLabel sizeToFit];
+                self.facebookLabel.center = CGPointMake(self.view.bounds.size.width/2.0, 100);
             });
         } else {
             NSLog(@"Error: %@", error);
@@ -148,6 +166,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.twitterLabel.text = [NSString stringWithFormat:@"Twitter Username: %@", username];
                 [self.twitterLabel sizeToFit];
+                self.twitterLabel.center = CGPointMake(self.view.bounds.size.width/2.0, 150);
             });
         } else {
             NSLog(@"Error: %@", error);

@@ -36,10 +36,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    LandingViewController *landingVC = [[LandingViewController alloc] init];
-    
-    RegistrationViewController *reg = [[RegistrationViewController alloc] initWithRootViewController:landingVC];
-    landingVC.delegate = reg;
+    RegistrationViewController *reg = [[RegistrationViewController alloc] init];
     self.window.rootViewController = reg;
     
     return YES;

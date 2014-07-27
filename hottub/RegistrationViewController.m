@@ -18,17 +18,13 @@
 
 @implementation RegistrationViewController
 
-- (id)initWithRootViewController:(UIViewController *)rootViewController {
-    self = [super initWithRootViewController:rootViewController];
-    if (self) {
-        
-    }
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    LandingViewController *landingVC = [[LandingViewController alloc] init];
+    landingVC.delegate = self;
+
+    [self pushViewController:landingVC animated:NO];
 }
 
 #pragma mark LandingViewControllerDelegate
