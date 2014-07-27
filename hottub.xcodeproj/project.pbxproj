@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D33524C19846F530049584A /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D33524B19846F530049584A /* RegistrationViewController.m */; };
+		5D33524F198473F20049584A /* LandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D33524E198473F20049584A /* LandingViewController.m */; };
+		5D33525219847E140049584A /* AccountBasicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D33525119847E140049584A /* AccountBasicsViewController.m */; };
 		650B2953198455C20097CA76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650B2952198455C20097CA76 /* Foundation.framework */; };
 		650B2955198455C20097CA76 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650B2954198455C20097CA76 /* CoreGraphics.framework */; };
 		650B2957198455C20097CA76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650B2956198455C20097CA76 /* UIKit.framework */; };
@@ -35,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D33524A19846F530049584A /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
+		5D33524B19846F530049584A /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
+		5D33524D198473F20049584A /* LandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingViewController.h; sourceTree = "<group>"; };
+		5D33524E198473F20049584A /* LandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingViewController.m; sourceTree = "<group>"; };
+		5D33525019847E140049584A /* AccountBasicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountBasicsViewController.h; sourceTree = "<group>"; };
+		5D33525119847E140049584A /* AccountBasicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountBasicsViewController.m; sourceTree = "<group>"; };
 		650B294F198455C20097CA76 /* hottub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hottub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		650B2952198455C20097CA76 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		650B2954198455C20097CA76 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -120,6 +129,12 @@
 				650B2969198455C30097CA76 /* Images.xcassets */,
 				650B2966198455C30097CA76 /* hottub.xcdatamodeld */,
 				650B295B198455C20097CA76 /* Supporting Files */,
+				5D33524A19846F530049584A /* RegistrationViewController.h */,
+				5D33524B19846F530049584A /* RegistrationViewController.m */,
+				5D33524D198473F20049584A /* LandingViewController.h */,
+				5D33524E198473F20049584A /* LandingViewController.m */,
+				5D33525019847E140049584A /* AccountBasicsViewController.h */,
+				5D33525119847E140049584A /* AccountBasicsViewController.m */,
 			);
 			path = hottub;
 			sourceTree = "<group>";
@@ -200,6 +215,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = daheins;
 				TargetAttributes = {
+					650B294E198455C20097CA76 = {
+						DevelopmentTeam = BM6B69ZQSR;
+					};
 					650B296E198455C30097CA76 = {
 						TestTargetID = 650B294E198455C20097CA76;
 					};
@@ -249,6 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				650B2965198455C30097CA76 /* AppDelegate.m in Sources */,
+				5D33525219847E140049584A /* AccountBasicsViewController.m in Sources */,
+				5D33524F198473F20049584A /* LandingViewController.m in Sources */,
+				5D33524C19846F530049584A /* RegistrationViewController.m in Sources */,
 				650B2961198455C20097CA76 /* main.m in Sources */,
 				650B2968198455C30097CA76 /* hottub.xcdatamodeld in Sources */,
 			);
@@ -369,6 +390,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "hottub/hottub-Prefix.pch";
 				INFOPLIST_FILE = "hottub/hottub-Info.plist";
@@ -382,6 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "hottub/hottub-Prefix.pch";
 				INFOPLIST_FILE = "hottub/hottub-Info.plist";
@@ -449,6 +472,7 @@
 				650B2983198455C30097CA76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		650B2984198455C30097CA76 /* Build configuration list for PBXNativeTarget "hottubTests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +481,7 @@
 				650B2986198455C30097CA76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
