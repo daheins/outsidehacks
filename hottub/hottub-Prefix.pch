@@ -14,4 +14,8 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import <CoreData/CoreData.h>
+    #import <CoreBluetooth/CoreBluetooth.h>
+    #import <CouchbaseLite/CouchbaseLite.h>
+
+    #import "WSMUtilities.h"
 #endif

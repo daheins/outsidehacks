@@ -17,6 +17,17 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
++ (void)load {
+#pragma mark - Custom Logging at Startup
+    
+    WSMLogger *logger = WSMLogger.sharedInstance;
+    [DDLog addLogger:logger];
+    
+    // Customize the WSLogger
+    logger.formatStyle = kWSMLogFormatStyleQueue;
+    logger[kWSMLogFormatKeyFile] = @16;
+    logger[kWSMLogFormatKeyFunction] = @40;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
