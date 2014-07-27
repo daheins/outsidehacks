@@ -8,11 +8,15 @@
 
 #import "AppDelegate.h"
 
+#import "RegistrationViewController.h"
+#import "LandingViewController.h"
+
 @implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -20,6 +24,13 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    LandingViewController *landingVC = [[LandingViewController alloc] init];
+    
+    RegistrationViewController *reg = [[RegistrationViewController alloc] initWithRootViewController:landingVC];
+    landingVC.delegate = reg;
+    self.window.rootViewController = reg;
+    
     return YES;
 }
 
