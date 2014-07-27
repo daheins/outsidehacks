@@ -7,8 +7,11 @@
 //
 
 #import "ListFriendsViewController.h"
+#import "FriendTableViewCell.h"
 
 @interface ListFriendsViewController ()
+
+@property (nonatomic, strong) UITableView *friendsList;
 
 @end
 
@@ -26,24 +29,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    [self.view addSubview:self.friendsList];
+    [self updateFriendsList];
+
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)updateFriendsList {
+    FriendTableViewCell *cell = [[FriendTableViewCell alloc] initWithFrame:CGRectMake(0, 0, 20, 30)];
+
+    [_friendsList insertSubview:cell atIndex:0];
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark Properties
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UITableView *)friendsList {
+    if (!_friendsList) {
+        _friendsList = [[UITableView alloc] init];
+    }
+    return _friendsList;
 }
-*/
 
 @end
