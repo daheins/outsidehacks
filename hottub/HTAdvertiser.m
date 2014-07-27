@@ -41,6 +41,14 @@ WSM_SINGLETON_WITH_NAME(sharedInstance)
     return self;
 }
 
+- (void) start {
+    [self startAdvertising];
+}
+
+- (void) stop {
+    [self.peripheralManager stopAdvertising];
+}
+
 - (void)subscribeToUser:(RACSubject *)subject {
     self.userSubscription = [subject subscribeNext:^(HTUser *user) {
         NSLog(@"User has changed!");
@@ -213,7 +221,7 @@ WSM_SINGLETON_WITH_NAME(sharedInstance)
 
 - (void)peripheralManager:(CBPeripheralManager *)peripheral
          willRestoreState:(NSDictionary *)dict {
-    DDLogError(@"Whoaa.");
+    DDLogError(@"We need this.");
 }
 
 #pragma mark - WSMCapabilityProvider Protocol

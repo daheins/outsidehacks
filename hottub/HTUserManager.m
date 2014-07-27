@@ -87,6 +87,16 @@ WSM_SINGLETON_WITH_NAME(sharedInstance)
     return YES;
 }
 
+- (NSArray *)nearbyUsers {
+    for (id<HTCapabilityProvider> provider in self.capabilityProviders) {
+        if ([provider respondsToSelector:@selector(nearbyUsers)]) {
+            return [provider nearbyUsers];
+        }
+    }
+    NSLog(@"Not capable right now.");
+    return nil;
+}
+
 #pragma mark - Lazy Property Instantiation
 
 - (NSMutableArray *) capabilityProviders {
