@@ -65,10 +65,12 @@
 - (void)accountDetailsViewControllerDidFinish:(AccountDetailsViewController *)controller withFacebook:(NSString *)facebook andTwitter:(NSString *)twitter {
     NSNumber *random = [NSNumber numberWithInt:arc4random()];
     [self.userInfo setObject:random forKey:@"id"];
-    [self.userInfo setObject:facebook forKey:@"facebook"];
-    [self.userInfo setObject:twitter forKey:@"twitter"];
-    
-    NSLog(@"These are the properties: %@", self.userInfo);
+    if (facebook) {
+        [self.userInfo setObject:facebook forKey:@"facebook"];
+    }
+    if (twitter) {
+        [self.userInfo setObject:twitter forKey:@"twitter"];
+    }
     
     HTUser *user = [HTUser createDefaultUserWithProperties:self.userInfo];
     NSData *imageData = UIImageJPEGRepresentation(self.profileImage, 0.7);
