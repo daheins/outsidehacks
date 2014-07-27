@@ -36,10 +36,8 @@
 
 - (UIButton *)registerButton {
     if (!_registerButton) {
-        _registerButton = [[UIButton alloc] initWithFrame:CGRectZero];
+        _registerButton = [UIButton buttonWithType:UIButtonTypeSystem];
         [_registerButton setTitle:@"Build Your Profile" forState:UIControlStateNormal];
-        [_registerButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_registerButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
         [_registerButton sizeToFit];
         [_registerButton addTarget:self action:@selector(onRegisterButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     }
