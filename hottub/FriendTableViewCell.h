@@ -13,4 +13,6 @@
 
 @property (nonatomic, strong) HTUser *user;
 
+@property (nonatomic, strong) UILabel *name;
+
 @end

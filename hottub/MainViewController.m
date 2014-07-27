@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "ListFriendsViewController.h"
 
 @interface MainViewController ()
 
@@ -26,7 +27,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    ListFriendsViewController *listFriendsView = [[ListFriendsViewController alloc] init];
+    [self.view addSubview:listFriendsView.view];
 }
 
 - (void)didReceiveMemoryWarning
