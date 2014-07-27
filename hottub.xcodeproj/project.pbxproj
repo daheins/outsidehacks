@@ -48,6 +48,8 @@
 		6EAAC716198498AD00B1315D /* HTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAC714198498AD00B1315D /* HTUser.m */; };
 		6EAAC7211984996300B1315D /* HTModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAC7201984996300B1315D /* HTModel.m */; };
 		6EAAC7221984996300B1315D /* HTModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAC7201984996300B1315D /* HTModel.m */; };
+		6ED206A91984AFAD00645BBD /* HTUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED206A81984AFAD00645BBD /* HTUserManager.m */; };
+		6ED206AA1984AFAD00645BBD /* HTUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED206A81984AFAD00645BBD /* HTUserManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,8 @@
 		6EAAC714198498AD00B1315D /* HTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTUser.m; sourceTree = "<group>"; };
 		6EAAC71F1984996300B1315D /* HTModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTModel.h; sourceTree = "<group>"; };
 		6EAAC7201984996300B1315D /* HTModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTModel.m; sourceTree = "<group>"; };
+		6ED206A71984AFAD00645BBD /* HTUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTUserManager.h; sourceTree = "<group>"; };
+		6ED206A81984AFAD00645BBD /* HTUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTUserManager.m; sourceTree = "<group>"; };
 		87663D3A33D9405A8C6ED099 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		A7A7E1F6DD004E0082A663DB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -211,6 +215,8 @@
 				650B298B19847CB80097CA76 /* AccountDetailsViewController.m */,
 				6EAAC70F198497E600B1315D /* HTAdvertiser.h */,
 				6EAAC710198497E600B1315D /* HTAdvertiser.m */,
+				6ED206A71984AFAD00645BBD /* HTUserManager.h */,
+				6ED206A81984AFAD00645BBD /* HTUserManager.m */,
 				6EAAC713198498AD00B1315D /* HTUser.h */,
 				6EAAC714198498AD00B1315D /* HTUser.m */,
 				6EAAC71F1984996300B1315D /* HTModel.h */,
@@ -400,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				650B2965198455C30097CA76 /* AppDelegate.m in Sources */,
+				6ED206A91984AFAD00645BBD /* HTUserManager.m in Sources */,
 				5D33525219847E140049584A /* AccountBasicsViewController.m in Sources */,
 				5D33524F198473F20049584A /* LandingViewController.m in Sources */,
 				5D33524C19846F530049584A /* RegistrationViewController.m in Sources */,
@@ -420,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ED206AA1984AFAD00645BBD /* HTUserManager.m in Sources */,
 				6EAAC712198497E600B1315D /* HTAdvertiser.m in Sources */,
 				650B297E198455C30097CA76 /* hottubTests.m in Sources */,
 				6EAAC700198494D200B1315D /* CBLDatabase+WSMUtilities.m in Sources */,

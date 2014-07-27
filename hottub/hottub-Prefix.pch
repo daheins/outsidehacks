@@ -16,6 +16,6 @@
     #import <CoreData/CoreData.h>
     #import <CoreBluetooth/CoreBluetooth.h>
     #import <CouchbaseLite/CouchbaseLite.h>
-
+    #import <ReactiveCocoa/ReactiveCocoa.h>
     #import "WSMUtilities.h"
 #endif
