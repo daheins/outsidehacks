@@ -23,17 +23,21 @@
     CBLDatabase *db = [[CBLManager sharedInstance] databaseNamed:localUsersDB error:&error];
     CBLDocument *doc = [db documentWithID:defaultUserDocument];
     HTUser *user;
-    if (doc) {
-        user = [HTUser modelForDocument: [db documentWithID:doc[defaultUserProperty]]];
+    if (doc[defaultUserProperty]) {
+        CBLDocument *userDocument = [db documentWithID:doc[defaultUserProperty]];
+        if (userDocument) {
+            user = [HTUser modelForDocument: userDocument];
+        }
+    }
+    
+    if (user) {
+        return doc[defaultUserProperty] ? ({
+            [user registerLocalDatabaseViews];
+            user;
+        }) : nil;
     } else {
         return nil;
     }
-    
-    
-    return doc[defaultUserProperty] ? ({
-        [user registerLocalDatabaseViews];
-        user;
-    }) : nil;
 }
 
 + (HTUser *) createDefaultUserWithProperties: (NSDictionary *) properties {
