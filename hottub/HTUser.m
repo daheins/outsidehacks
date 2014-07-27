@@ -14,6 +14,8 @@
 #define defaultUserDocument @"default_user"
 #define defaultUserProperty @"userID"
 
+@dynamic name;
+
 + (HTUser *) defaultUser {
     NSError *error;
     CBLDatabase *db = [[CBLManager sharedInstance] databaseNamed:localUsersDB error:&error];

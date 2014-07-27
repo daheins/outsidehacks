@@ -10,6 +10,7 @@
 		5D33524C19846F530049584A /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D33524B19846F530049584A /* RegistrationViewController.m */; };
 		5D33524F198473F20049584A /* LandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D33524E198473F20049584A /* LandingViewController.m */; };
 		5D33525219847E140049584A /* AccountBasicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D33525119847E140049584A /* AccountBasicsViewController.m */; };
+		5D3352551984A1060049584A /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3352541984A1060049584A /* UIImage+Resize.m */; };
 		609853BEAE19462A9F70A30C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A7E1F6DD004E0082A663DB /* libPods.a */; };
 		650B2953198455C20097CA76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650B2952198455C20097CA76 /* Foundation.framework */; };
 		650B2955198455C20097CA76 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650B2954198455C20097CA76 /* CoreGraphics.framework */; };
@@ -66,6 +67,8 @@
 		5D33524E198473F20049584A /* LandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingViewController.m; sourceTree = "<group>"; };
 		5D33525019847E140049584A /* AccountBasicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountBasicsViewController.h; sourceTree = "<group>"; };
 		5D33525119847E140049584A /* AccountBasicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountBasicsViewController.m; sourceTree = "<group>"; };
+		5D3352531984A1060049584A /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		5D3352541984A1060049584A /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		650B294F198455C20097CA76 /* hottub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hottub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		650B2952198455C20097CA76 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		650B2954198455C20097CA76 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -212,6 +215,8 @@
 				6EAAC714198498AD00B1315D /* HTUser.m */,
 				6EAAC71F1984996300B1315D /* HTModel.h */,
 				6EAAC7201984996300B1315D /* HTModel.m */,
+				5D3352531984A1060049584A /* UIImage+Resize.h */,
+				5D3352541984A1060049584A /* UIImage+Resize.m */,
 			);
 			path = hottub;
 			sourceTree = "<group>";
@@ -400,6 +405,7 @@
 				5D33524C19846F530049584A /* RegistrationViewController.m in Sources */,
 				650B2961198455C20097CA76 /* main.m in Sources */,
 				650B2968198455C30097CA76 /* hottub.xcdatamodeld in Sources */,
+				5D3352551984A1060049584A /* UIImage+Resize.m in Sources */,
 				650B298C19847CB80097CA76 /* AccountDetailsViewController.m in Sources */,
 				6EAAC6FD198494D200B1315D /* WSMColorPalette.m in Sources */,
 				6EAAC6FB198494D200B1315D /* WSMLogger.m in Sources */,
