@@ -11,6 +11,8 @@
 
 @interface UserTableViewCell : UITableViewCell
 
+- (id)initWithFrame:(CGRect)frame andUser:(HTUser *)user;
+
 @property (nonatomic, strong) HTUser *user;
 
 @property (nonatomic, strong) UILabel *name;
