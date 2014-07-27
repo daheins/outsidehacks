@@ -68,6 +68,8 @@ typedef NS_OPTIONS(NSUInteger, HTUserManagerState) {
 
 - (BOOL)authorized;
 
+- (NSArray *) nearbyUsers; 
+
 @end
 
 
@@ -108,6 +110,12 @@ typedef NS_OPTIONS(NSUInteger, HTUserManagerState) {
  */
 - (RACSubject *)capabilitySignal;
 
+- (void) start;
+
+- (void) stop;
+
 @optional
+
+- (NSArray *) nearbyUsers;
 
 @end

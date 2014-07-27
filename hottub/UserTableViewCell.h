@@ -1,5 +1,5 @@
 //
-//  FriendTableViewCell.h
+//  UserTableViewCell.h
 //  hottub
 //
 //  Created by Daniel Heins on 7/26/14.
@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "HTUser.h"
 
-@interface FriendTableViewCell : UITableViewCell
+@interface UserTableViewCell : UITableViewCell
+
+- (id)initWithFrame:(CGRect)frame andUser:(HTUser *)user;
 
 @property (nonatomic, strong) HTUser *user;
 

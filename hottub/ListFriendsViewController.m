@@ -7,7 +7,7 @@
 //
 
 #import "ListFriendsViewController.h"
-#import "FriendTableViewCell.h"
+#import "UserTableViewCell.h"
 
 @interface ListFriendsViewController ()
 
@@ -31,12 +31,14 @@
     [super viewDidLoad];
 
     [self.view addSubview:self.friendsList];
+    [self.view setBackgroundColor:[UIColor redColor]];
     [self updateFriendsList];
 
 }
 
 - (void)updateFriendsList {
-    FriendTableViewCell *cell = [[FriendTableViewCell alloc] initWithFrame:CGRectMake(0, 0, 20, 30)];
+    HTUser *user = [HTUser defaultUser];
+    UserTableViewCell *cell = [[UserTableViewCell alloc] initWithFrame:CGRectMake(0, 50, 20, 30) andUser:user];
 
     [_friendsList insertSubview:cell atIndex:0];
 }
@@ -45,7 +47,7 @@
 
 - (UITableView *)friendsList {
     if (!_friendsList) {
-        _friendsList = [[UITableView alloc] init];
+        _friendsList = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 200)];
     }
     return _friendsList;
 }

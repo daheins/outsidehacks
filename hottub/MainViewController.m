@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
 
-    ListFriendsViewController *listFriendsView = [[ListFriendsViewController alloc] init];
+    ListFriendsViewController *listFriendsView = [[ListFriendsViewController alloc] initWithNibName:nil bundle:nil];
     [self.view addSubview:listFriendsView.view];
 }
 

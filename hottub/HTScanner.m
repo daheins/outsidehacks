@@ -49,6 +49,18 @@ WSM_SINGLETON_WITH_NAME(sharedInstance)
     }));
 }
 
+- (void) start {
+    [self startScan];
+    
+}
+
+- (void) stop {
+    for (CBPeripheral *staged in [self.stagedDevices setByAddingObjectsFromSet: self.connectedDevices].objectEnumerator) {
+        [self.centralManager cancelPeripheralConnection:staged];
+    }
+    [self.centralManager stopScan];
+}
+
 #pragma mark - Lazy Properties
 
 - (RACSubject *) capabilitySubject {
