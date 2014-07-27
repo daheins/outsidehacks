@@ -204,7 +204,7 @@
     
     [facebookAccount requestAccessToAccountsWithType:facebookType options:options completion:^(BOOL granted, NSError *error) {
         if (granted) {
-            NSString *username = [[[facebookAccount accounts] lastObject] username];
+            NSString *username = [[[facebookAccount accountsWithAccountType:facebookType] lastObject] username];
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.facebookLabel.hidden = NO;
                 self.facebookLabel.text = [NSString stringWithFormat:@"FB Username: %@", username];
@@ -225,9 +225,10 @@
     ACAccountStore *twitterAccount = [[ACAccountStore alloc] init];
 
     ACAccountType *twitterType = [twitterAccount accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+    
     [twitterAccount requestAccessToAccountsWithType:twitterType options:nil completion:^(BOOL granted, NSError *error) {
         if (granted) {
-            NSString *username = [[[twitterAccount accounts] lastObject] username];
+            NSString *username = [[[twitterAccount accountsWithAccountType:twitterType] lastObject] username];
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.twitterLabel.hidden = NO;
                 self.twitterLabel.text = [NSString stringWithFormat:@"Twitter Username: %@", username];
